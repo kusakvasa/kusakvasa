@@ -1,27 +1,23 @@
 "use client";
 
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useLang } from "./LangContext";
+import type { Lang } from "@/lib/content";
 
 export default function LangToggle() {
   const { lang, setLang } = useLang();
   return (
-    <div className="inline-flex rounded-full border border-gray-300 bg-white text-xs overflow-hidden">
-      <button
-        onClick={() => setLang("ru")}
-        className={`px-3 py-1 transition-colors ${
-          lang === "ru" ? "bg-gray-900 text-white" : "text-gray-600"
-        }`}
-      >
-        RU
-      </button>
-      <button
-        onClick={() => setLang("en")}
-        className={`px-3 py-1 transition-colors ${
-          lang === "en" ? "bg-gray-900 text-white" : "text-gray-600"
-        }`}
-      >
-        EN
-      </button>
-    </div>
+    <ToggleGroup
+      value={[lang]}
+      onValueChange={(vals) => {
+        if (vals.length > 0) setLang(vals[vals.length - 1] as Lang);
+      }}
+      spacing={0}
+      variant="outline"
+      size="sm"
+    >
+      <ToggleGroupItem value="ru">RU</ToggleGroupItem>
+      <ToggleGroupItem value="en">EN</ToggleGroupItem>
+    </ToggleGroup>
   );
 }
