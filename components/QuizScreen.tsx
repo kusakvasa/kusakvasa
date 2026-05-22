@@ -50,11 +50,16 @@ export default function QuizScreen({
 
   return (
     <div className="flex flex-col gap-5 py-4">
-      <Progress value={(step / total) * 100} />
+      <Progress
+        value={(step / total) * 100}
+        className="[&_[data-slot=progress-indicator]]:bg-vivid"
+      />
 
       <div>
-        <h2 className="text-xl font-semibold">{question.title[lang]}</h2>
-        <p className="text-sm text-muted-foreground mt-1">{ui.multi[lang]}</p>
+        <h2 className="font-display italic text-2xl font-bold leading-snug">
+          {question.title[lang]}
+        </h2>
+        <p className="text-xs text-muted-foreground mt-1">{ui.multi[lang]}</p>
       </div>
 
       <div className="flex flex-col gap-2">
@@ -67,20 +72,26 @@ export default function QuizScreen({
               key={opt.key}
               onClick={() => toggle(opt.key)}
               className={cn(
-                "text-left rounded-xl px-4 py-3 border-2 transition-all",
+                "text-left rounded-lg px-4 py-3 border-2 transition-all",
                 isNone
                   ? isSelected
-                    ? "border-border bg-secondary text-secondary-foreground"
-                    : "border-dashed border-border bg-muted/50 text-muted-foreground"
+                    ? "border-border bg-secondary"
+                    : "border-dashed border-border bg-muted/40 text-muted-foreground"
                   : isSelected
-                  ? "border-primary bg-primary/5"
-                  : "border-border bg-card hover:border-primary/50"
+                  ? "border-vivid bg-vivid/10"
+                  : "border-border bg-card hover:border-foreground/30"
               )}
             >
               <div className="flex items-start gap-3">
-                <OptionIcon size={20} className="mt-0.5 shrink-0" />
+                <OptionIcon
+                  size={18}
+                  className={cn(
+                    "mt-0.5 shrink-0",
+                    isSelected && !isNone ? "text-foreground" : "text-muted-foreground"
+                  )}
+                />
                 <div className="flex-1">
-                  <div className="font-semibold text-sm">{opt.title[lang]}</div>
+                  <div className="font-medium text-sm">{opt.title[lang]}</div>
                   {opt.hint[lang] && (
                     <div className="text-xs text-muted-foreground mt-0.5">
                       {opt.hint[lang]}

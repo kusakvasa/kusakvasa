@@ -1,17 +1,11 @@
 "use client";
 
+import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-react";
 import { ui, OptionKey, TELEGRAM_URL } from "@/lib/content";
-import {
-  practicumChips,
-  smenaChips,
-  filterChips,
-  selectPdfPath,
-} from "@/lib/chipMapping";
+import { practicumChips, smenaChips, filterChips, selectPdfPath } from "@/lib/chipMapping";
 import { useLang } from "./LangContext";
 import Avatar from "./Avatar";
-import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-react";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -31,43 +25,47 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
   return (
     <div className="flex flex-col gap-5 py-4">
       <div className="flex items-center gap-4">
-        <Avatar size={64} />
+        <Avatar size={56} />
         <div>
-          <h1 className="text-xl font-bold">{ui.name[lang]}</h1>
-          <p className="text-sm text-muted-foreground">{ui.role[lang]}</p>
+          <h1 className="font-display italic text-xl font-bold leading-tight">
+            {ui.name[lang]}
+          </h1>
+          <p className="text-xs text-muted-foreground">{ui.role[lang]}</p>
         </div>
       </div>
 
       <Card>
-        <CardHeader>
-          <CardTitle className="text-sm">{ui.practicumLabel[lang]}</CardTitle>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            {ui.practicumLabel[lang]}
+          </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
           {practicum.map((chip) => (
-            <Badge
+            <div
               key={chip.id}
-              variant="secondary"
-              className="whitespace-normal h-auto py-2 text-xs leading-relaxed"
+              className="rounded-md border border-border bg-muted/40 px-3 py-2 text-sm leading-relaxed"
             >
               {chip[lang]}
-            </Badge>
+            </div>
           ))}
         </CardContent>
       </Card>
 
       <Card>
-        <CardHeader>
-          <CardTitle className="text-sm">{ui.smenaLabel[lang]}</CardTitle>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            {ui.smenaLabel[lang]}
+          </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
           {smena.map((chip) => (
-            <Badge
+            <div
               key={chip.id}
-              variant="outline"
-              className="whitespace-normal h-auto py-2 text-xs leading-relaxed"
+              className="rounded-md border border-border bg-muted/40 px-3 py-2 text-sm leading-relaxed"
             >
               {chip[lang]}
-            </Badge>
+            </div>
           ))}
         </CardContent>
       </Card>

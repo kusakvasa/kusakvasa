@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="mx-auto max-w-[420px] px-5 pt-4 pb-10">
         <div className="flex justify-end mb-2">
           <LangToggle />
