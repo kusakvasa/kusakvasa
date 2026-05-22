@@ -207,4 +207,4 @@ export const questions: Question[] = [
   },
 ];
 
-export const TELEGRAM_URL = "https://t.me/PLACEHOLDER_USERNAME";
+export const TELEGRAM_URL = "https://t.me/vverlassen";
