@@ -49,30 +49,45 @@ export default function QuizScreen({
   }
 
   const popColors = [
-    "bg-pop-yellow",
-    "bg-pop-green",
-    "bg-pop-orange",
-    "bg-pop-blue",
-    "bg-pop-pink",
-    "bg-pop-red",
-    "bg-pop-sky",
+    "answer-color-yellow",
+    "answer-color-green",
+    "answer-color-orange",
+    "answer-color-blue",
+    "answer-color-pink",
+    "answer-color-red",
+    "answer-color-sky",
+  ];
+
+  const optionShapes = [
+    "answer-piece--scoop",
+    "answer-piece--capsule",
+    "answer-piece--ramp",
+    "answer-piece--loop",
+    "answer-piece--ticket",
   ];
 
   return (
     <div className="flex flex-col gap-5 py-4">
-      <Progress
-        value={(step / total) * 100}
-        className="[&_[data-slot=progress-indicator]]:bg-pop-yellow h-1.5"
-      />
-
-      <div>
-        <h2 className="text-3xl font-extrabold leading-[1.05] tracking-tight">
-          {question.title[lang]}
-        </h2>
-        <p className="text-xs text-muted-foreground mt-2">{ui.multi[lang]}</p>
+      <div className="quiz-meter">
+        <div className="quiz-meter-label">
+          <span>{step}</span>
+          <span>/</span>
+          <span>{total}</span>
+        </div>
+        <Progress
+          value={(step / total) * 100}
+          className="quiz-meter-track [&_[data-slot=progress-indicator]]:bg-pop-yellow [&_[data-slot=progress-track]]:bg-white/10"
+        />
       </div>
 
-      <div className="flex flex-col gap-2.5">
+      <div>
+        <h2 className="text-[2rem] font-extrabold leading-[0.98] tracking-normal">
+          {question.title[lang]}
+        </h2>
+        <p className="quiz-helper mt-3 text-xs font-bold">{ui.multi[lang]}</p>
+      </div>
+
+      <div className="answer-stack flex flex-col gap-2.5">
         {question.options.map((opt, i) => {
           const isSelected = selected.includes(opt.key);
           const isNone = opt.key === "none";
@@ -81,34 +96,36 @@ export default function QuizScreen({
           return (
             <button
               key={opt.key}
+              aria-pressed={isSelected}
               onClick={() => toggle(opt.key)}
               className={cn(
-                "text-left rounded-full px-5 py-3.5 transition-all",
+                "answer-piece text-left transition-all",
+                optionShapes[i % optionShapes.length],
                 isNone
                   ? isSelected
-                    ? "border-2 border-white/40 bg-white/5 text-foreground"
-                    : "border-2 border-dashed border-white/15 bg-transparent text-muted-foreground"
+                    ? "answer-piece--none answer-piece--selected text-foreground"
+                    : "answer-piece--none text-muted-foreground"
                   : isSelected
-                  ? `${color} text-black font-semibold`
-                  : "border-2 border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/20"
+                  ? `${color} answer-piece--selected text-black font-semibold`
+                  : `${color} text-black`
               )}
             >
               <div className="flex items-center gap-3">
                 <OptionIcon
                   size={20}
                   className={cn(
-                    "shrink-0",
-                    isSelected && !isNone ? "text-black" : "text-muted-foreground"
+                    "answer-icon shrink-0",
+                    isNone ? "text-current" : "text-black"
                   )}
                 />
                 <div className="flex-1 min-w-0">
-                  <div className={cn("text-base leading-snug", isSelected && !isNone ? "font-bold" : "font-semibold")}>
+                  <div className="text-base font-extrabold leading-snug">
                     {opt.title[lang]}
                   </div>
                   {opt.hint[lang] && (
                     <div className={cn(
-                      "text-xs mt-0.5 truncate",
-                      isSelected && !isNone ? "text-black/70" : "text-muted-foreground"
+                      "mt-0.5 truncate text-xs font-semibold",
+                      isNone ? "text-current/70" : "text-black/65"
                     )}>
                       {opt.hint[lang]}
                     </div>
@@ -124,14 +141,14 @@ export default function QuizScreen({
         <Button
           onClick={onNext}
           disabled={selected.length === 0}
-          className="w-full rounded-full bg-white text-black hover:bg-white/90 font-semibold"
+          className="game-cta w-full font-extrabold text-black"
           size="lg"
         >
           {(nextLabel ?? ui.next)[lang]}
           <IconArrowRight size={16} />
         </Button>
         {onBack && (
-          <Button onClick={onBack} variant="ghost" className="w-full rounded-full" size="lg">
+          <Button onClick={onBack} variant="ghost" className="game-back w-full" size="lg">
             <IconArrowLeft size={16} />
             {ui.back[lang]}
           </Button>

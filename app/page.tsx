@@ -30,9 +30,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-[420px] px-5 pt-4 pb-10">
-        <div className="flex justify-end mb-2">
+    <div className="playfield min-h-screen bg-background text-foreground">
+      <div className="relative mx-auto max-w-[420px] px-5 pt-4 pb-10">
+        <div className="utility-rail flex justify-end mb-2">
           <LangToggle />
         </div>
 
