@@ -14,6 +14,7 @@ type Step = 0 | 1 | 2 | 3 | 4;
 function App() {
   const [step, setStep] = useState<Step>(0);
   const [direction, setDirection] = useState<1 | -1>(1);
+  const [resultBackStep, setResultBackStep] = useState<Step>(3);
   const [q1, setQ1] = useState<OptionKey[]>([]);
   const [q2, setQ2] = useState<OptionKey[]>([]);
   const [q3, setQ3] = useState<OptionKey[]>([]);
@@ -21,6 +22,11 @@ function App() {
   function go(next: Step) {
     setDirection(next > step ? 1 : -1);
     setStep(next);
+  }
+
+  function showResult(backStep: Step) {
+    setResultBackStep(backStep);
+    go(4);
   }
 
   const slideVariants = {
@@ -47,7 +53,12 @@ function App() {
               exit="exit"
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              {step === 0 && <WelcomeScreen onStart={() => go(1)} />}
+              {step === 0 && (
+                <WelcomeScreen
+                  onStart={() => go(1)}
+                  onSkip={() => showResult(0)}
+                />
+              )}
               {step === 1 && (
                 <QuizScreen
                   question={questions[0]}
@@ -74,7 +85,7 @@ function App() {
                   question={questions[2]}
                   selected={q3}
                   onChange={setQ3}
-                  onNext={() => go(4)}
+                  onNext={() => showResult(3)}
                   onBack={() => go(2)}
                   nextLabel={ui.toResult}
                   step={3}
@@ -86,7 +97,7 @@ function App() {
                   q1={q1}
                   q2={q2}
                   q3={q3}
-                  onBack={() => go(3)}
+                  onBack={() => go(resultBackStep)}
                 />
               )}
             </motion.div>

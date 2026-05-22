@@ -1,13 +1,18 @@
 "use client";
 
 import { IconArrowRight } from "@tabler/icons-react";
+import Image from "next/image";
 import { ui } from "@/lib/content";
 import { useLang } from "./LangContext";
-import Avatar from "./Avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-export default function WelcomeScreen({ onStart }: { onStart: () => void }) {
+interface WelcomeScreenProps {
+  onStart: () => void;
+  onSkip: () => void;
+}
+
+export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
   const { lang } = useLang();
   const tagStyles = [
     "bg-pop-yellow welcome-tag--pill",
@@ -21,7 +26,14 @@ export default function WelcomeScreen({ onStart }: { onStart: () => void }) {
       <div className="welcome-avatar-stage">
         <span className="welcome-avatar-slice bg-pop-orange" aria-hidden="true" />
         <span className="welcome-avatar-slice welcome-avatar-slice--sky bg-pop-sky" aria-hidden="true" />
-        <Avatar size={94} />
+        <Image
+          src="/varya-photo.jpeg"
+          alt={ui.photoAlt[lang]}
+          width={640}
+          height={640}
+          className="welcome-photo"
+          priority
+        />
       </div>
       <div className="flex flex-col items-center gap-2">
         <h1 className="max-w-[360px] text-[2.6rem] font-extrabold leading-[0.92] tracking-normal">
@@ -52,6 +64,14 @@ export default function WelcomeScreen({ onStart }: { onStart: () => void }) {
         >
           {ui.cta[lang]}
           <IconArrowRight size={16} />
+        </Button>
+        <Button
+          onClick={onSkip}
+          variant="ghost"
+          className="welcome-skip w-full text-center font-bold"
+          size="lg"
+        >
+          {ui.skipCta[lang]}
         </Button>
         <p className="text-xs text-muted-foreground">{ui.ctaHint[lang]}</p>
       </div>

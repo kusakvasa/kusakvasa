@@ -21,15 +21,6 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
   const smena = filterChips(smenaChips, q1);
   const pdfPath = selectPdfPath(q2, q3);
 
-  const practicumColors = ["bg-pop-yellow", "bg-pop-green", "bg-pop-orange", "bg-pop-pink"];
-  const smenaColors = ["bg-pop-blue", "bg-pop-sky", "bg-pop-red"];
-  const chipShapes = [
-    "result-chip--scoop",
-    "result-chip--ramp",
-    "result-chip--loop",
-    "result-chip--ticket",
-  ];
-
   return (
     <div className="flex flex-col gap-6 py-4">
       <div className="result-identity flex items-center gap-3">
@@ -43,18 +34,14 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="section-ribbon text-xs font-bold uppercase text-black">
+        <h2 className="result-label text-xs font-bold uppercase text-muted-foreground">
           {ui.practicumLabel[lang]}
         </h2>
         <div className="flex flex-col gap-2">
-          {practicum.map((chip, i) => (
+          {practicum.map((chip) => (
             <div
               key={chip.id}
-              className={cn(
-                "result-chip text-sm font-extrabold leading-snug text-black",
-                practicumColors[i % practicumColors.length],
-                chipShapes[i % chipShapes.length]
-              )}
+              className="result-chip text-sm font-semibold leading-snug"
             >
               {chip[lang]}
             </div>
@@ -63,18 +50,14 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="section-ribbon section-ribbon--blue text-xs font-bold uppercase text-black">
+        <h2 className="result-label text-xs font-bold uppercase text-muted-foreground">
           {ui.smenaLabel[lang]}
         </h2>
         <div className="flex flex-col gap-2">
-          {smena.map((chip, i) => (
+          {smena.map((chip) => (
             <div
               key={chip.id}
-              className={cn(
-                "result-chip text-sm font-extrabold leading-snug text-black",
-                smenaColors[i % smenaColors.length],
-                chipShapes[(i + 1) % chipShapes.length]
-              )}
+              className="result-chip text-sm font-semibold leading-snug"
             >
               {chip[lang]}
             </div>

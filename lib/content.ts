@@ -16,13 +16,18 @@ export interface Question {
 }
 
 export const ui = {
-  name: { ru: "Варвара Фёдорова", en: "Varvara Fedorova" },
-  role: { ru: "Менеджер продукта", en: "Product Manager" },
+  name: { ru: "Варя Фёдорова", en: "Varya Fedorova" },
+  role: { ru: "Менеджер проектов", en: "Project Manager" },
+  photoAlt: { ru: "Портрет Вари Фёдоровой", en: "Portrait of Varya Fedorova" },
   welcomeText: {
     ru: "Нажмите кнопку — получите резюме, которое отвечает именно на ваши вопросы",
     en: "Tap the button — get a resume that answers your exact questions",
   },
   cta: { ru: "Найти своё резюме", en: "Find my resume" },
+  skipCta: {
+    ru: "Не хочу искать, хочу сразу резюме",
+    en: "Skip the search, show the resume",
+  },
   ctaHint: { ru: "займёт ~1 минуту", en: "takes ~1 minute" },
   multi: { ru: "можно выбрать несколько", en: "multiple choice" },
   next: { ru: "Далее", en: "Next" },
