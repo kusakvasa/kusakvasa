@@ -9,6 +9,7 @@ import {
 } from "@/lib/chipMapping";
 import { useLang } from "./LangContext";
 import Avatar from "./Avatar";
+import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,19 +76,22 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
         <a
           href={pdfPath}
           download="Варвара_Федорова_резюме.pdf"
-          className={cn(buttonVariants({ size: "lg" }), "w-full")}
+          className={cn(buttonVariants({ size: "lg" }), "w-full gap-2")}
         >
+          <IconDownload size={16} />
           {ui.downloadPdf[lang]}
         </a>
         <a
           href={TELEGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full")}
+          className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full gap-2")}
         >
+          <IconBrandTelegram size={16} />
           {ui.contactTg[lang]}
         </a>
         <Button onClick={onBack} variant="ghost" size="lg" className="w-full">
+          <IconArrowLeft size={16} />
           {ui.back[lang]}
         </Button>
       </div>

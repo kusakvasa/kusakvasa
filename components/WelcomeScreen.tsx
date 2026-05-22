@@ -1,5 +1,6 @@
 "use client";
 
+import { IconArrowRight } from "@tabler/icons-react";
 import { ui } from "@/lib/content";
 import { useLang } from "./LangContext";
 import Avatar from "./Avatar";
@@ -26,6 +27,7 @@ export default function WelcomeScreen({ onStart }: { onStart: () => void }) {
       <div className="flex flex-col items-center gap-2 w-full">
         <Button onClick={onStart} className="w-full" size="lg">
           {ui.cta[lang]}
+          <IconArrowRight size={16} />
         </Button>
         <p className="text-xs text-muted-foreground">{ui.ctaHint[lang]}</p>
       </div>

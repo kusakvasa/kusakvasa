@@ -1,10 +1,23 @@
 "use client";
 
+import {
+  IconChartBar, IconRocket, IconSettings, IconUsers, IconMoodConfuzed,
+  IconBrain, IconPackage, IconRefresh, IconSchool,
+  IconBuildingFactory2, IconBuilding, IconSitemap, IconTrendingUp,
+  IconArrowRight, IconArrowLeft,
+  type Icon,
+} from "@tabler/icons-react";
 import { ui, Question, OptionKey } from "@/lib/content";
 import { useLang } from "./LangContext";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
+
+const iconMap: Record<string, Icon> = {
+  IconChartBar, IconRocket, IconSettings, IconUsers, IconMoodConfuzed,
+  IconBrain, IconPackage, IconRefresh, IconSchool,
+  IconBuildingFactory2, IconBuilding, IconSitemap, IconTrendingUp,
+};
 
 interface QuizScreenProps {
   question: Question;
@@ -18,14 +31,7 @@ interface QuizScreenProps {
 }
 
 export default function QuizScreen({
-  question,
-  selected,
-  onChange,
-  onNext,
-  onBack,
-  nextLabel,
-  step,
-  total,
+  question, selected, onChange, onNext, onBack, nextLabel, step, total,
 }: QuizScreenProps) {
   const { lang } = useLang();
 
@@ -42,8 +48,6 @@ export default function QuizScreen({
     }
   }
 
-  const canProceed = selected.length > 0;
-
   return (
     <div className="flex flex-col gap-5 py-4">
       <Progress value={(step / total) * 100} />
@@ -57,6 +61,7 @@ export default function QuizScreen({
         {question.options.map((opt) => {
           const isSelected = selected.includes(opt.key);
           const isNone = opt.key === "none";
+          const OptionIcon = iconMap[opt.icon] ?? IconMoodConfuzed;
           return (
             <button
               key={opt.key}
@@ -73,7 +78,7 @@ export default function QuizScreen({
               )}
             >
               <div className="flex items-start gap-3">
-                <span className="text-xl">{opt.emoji}</span>
+                <OptionIcon size={20} className="mt-0.5 shrink-0" />
                 <div className="flex-1">
                   <div className="font-semibold text-sm">{opt.title[lang]}</div>
                   {opt.hint[lang] && (
@@ -89,11 +94,18 @@ export default function QuizScreen({
       </div>
 
       <div className="flex flex-col gap-2">
-        <Button onClick={onNext} disabled={!canProceed} className="w-full" size="lg">
+        <Button
+          onClick={onNext}
+          disabled={selected.length === 0}
+          className="w-full"
+          size="lg"
+        >
           {(nextLabel ?? ui.next)[lang]}
+          <IconArrowRight size={16} />
         </Button>
         {onBack && (
           <Button onClick={onBack} variant="ghost" className="w-full" size="lg">
+            <IconArrowLeft size={16} />
             {ui.back[lang]}
           </Button>
         )}

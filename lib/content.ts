@@ -4,7 +4,7 @@ export type OptionKey = "A" | "B" | "C" | "D" | "none";
 
 export interface QuestionOption {
   key: OptionKey;
-  emoji: string;
+  icon: string;
   title: { ru: string; en: string };
   hint: { ru: string; en: string };
 }
@@ -22,12 +22,12 @@ export const ui = {
     ru: "Нажмите кнопку — получите резюме, которое отвечает именно на ваши вопросы",
     en: "Tap the button — get a resume that answers your exact questions",
   },
-  cta: { ru: "Найти своё резюме →", en: "Find my resume →" },
+  cta: { ru: "Найти своё резюме", en: "Find my resume" },
   ctaHint: { ru: "займёт ~1 минуту", en: "takes ~1 minute" },
   multi: { ru: "можно выбрать несколько", en: "multiple choice" },
-  next: { ru: "Далее →", en: "Next →" },
-  back: { ru: "← Назад", en: "← Back" },
-  toResult: { ru: "Смотреть результат →", en: "See result →" },
+  next: { ru: "Далее", en: "Next" },
+  back: { ru: "Назад", en: "Back" },
+  toResult: { ru: "Смотреть результат", en: "See result" },
   noneLabel: { ru: "Ничего из этого", en: "None of the above" },
   noneHint: { ru: "посмотрим что дальше", en: "let's see what's next" },
   downloadPdf: { ru: "Скачать резюме (PDF)", en: "Download resume (PDF)" },
@@ -52,13 +52,13 @@ export const questions: Question[] = [
     options: [
       {
         key: "A",
-        emoji: "📊",
+        icon: "IconChartBar",
         title: { ru: "Аналитика и метрики", en: "Analytics & metrics" },
         hint: { ru: "данные, дашборды, SQL", en: "data, dashboards, SQL" },
       },
       {
         key: "B",
-        emoji: "🚀",
+        icon: "IconRocket",
         title: { ru: "Запуск и рост продукта", en: "Product launch & growth" },
         hint: {
           ru: "выводить фичи, считать unit-экономику",
@@ -67,7 +67,7 @@ export const questions: Question[] = [
       },
       {
         key: "C",
-        emoji: "⚙️",
+        icon: "IconSettings",
         title: { ru: "Эффективность процессов", en: "Process efficiency" },
         hint: {
           ru: "автоматизация, снижение ручного труда",
@@ -76,7 +76,7 @@ export const questions: Question[] = [
       },
       {
         key: "D",
-        emoji: "👥",
+        icon: "IconUsers",
         title: { ru: "Команда и люди", en: "Team & people" },
         hint: {
           ru: "онбординг, обучение, рост команды",
@@ -85,7 +85,7 @@ export const questions: Question[] = [
       },
       {
         key: "none",
-        emoji: "🤷",
+        icon: "IconMoodConfuzed",
         title: { ru: "Ничего из этого", en: "None of the above" },
         hint: { ru: "посмотрим что дальше", en: "let's see what's next" },
       },
@@ -100,7 +100,7 @@ export const questions: Question[] = [
     options: [
       {
         key: "A",
-        emoji: "🧠",
+        icon: "IconBrain",
         title: { ru: "Системное мышление", en: "Systems thinking" },
         hint: {
           ru: "понимание архитектуры, а не только инструментов",
@@ -109,7 +109,7 @@ export const questions: Question[] = [
       },
       {
         key: "B",
-        emoji: "📦",
+        icon: "IconPackage",
         title: {
           ru: "Запуск и доставка фич",
           en: "Shipping & delivery",
@@ -121,7 +121,7 @@ export const questions: Question[] = [
       },
       {
         key: "C",
-        emoji: "🔄",
+        icon: "IconRefresh",
         title: {
           ru: "Эффективность и автоматизация",
           en: "Efficiency & automation",
@@ -133,7 +133,7 @@ export const questions: Question[] = [
       },
       {
         key: "D",
-        emoji: "🎓",
+        icon: "IconSchool",
         title: { ru: "Рост команды", en: "Team growth" },
         hint: {
           ru: "онбординг, обучение, передача знаний",
@@ -142,7 +142,7 @@ export const questions: Question[] = [
       },
       {
         key: "none",
-        emoji: "🤷",
+        icon: "IconMoodConfuzed",
         title: { ru: "Ничего из этого", en: "None of the above" },
         hint: { ru: "", en: "" },
       },
@@ -157,7 +157,7 @@ export const questions: Question[] = [
     options: [
       {
         key: "A",
-        emoji: "🏗️",
+        icon: "IconBuildingFactory2",
         title: { ru: "Стартап / быстрый рост", en: "Startup / fast growth" },
         hint: {
           ru: "скорость важнее процессов",
@@ -166,7 +166,7 @@ export const questions: Question[] = [
       },
       {
         key: "B",
-        emoji: "🏢",
+        icon: "IconBuilding",
         title: { ru: "Корпорация", en: "Corporation" },
         hint: {
           ru: "процессы, стейкхолдеры, согласования",
@@ -175,7 +175,7 @@ export const questions: Question[] = [
       },
       {
         key: "C",
-        emoji: "🔀",
+        icon: "IconSitemap",
         title: {
           ru: "Кросс-функциональная команда",
           en: "Cross-functional team",
@@ -187,7 +187,7 @@ export const questions: Question[] = [
       },
       {
         key: "D",
-        emoji: "📈",
+        icon: "IconTrendingUp",
         title: {
           ru: "Есть аналитики в команде",
           en: "Has analysts on the team",
@@ -199,7 +199,7 @@ export const questions: Question[] = [
       },
       {
         key: "none",
-        emoji: "🤷",
+        icon: "IconMoodConfuzed",
         title: { ru: "Ничего из этого", en: "None of the above" },
         hint: { ru: "", en: "" },
       },
