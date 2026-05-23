@@ -61,7 +61,9 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
           <span className="result-motion result-motion--orbit" aria-hidden="true" />
           <span className="result-motion result-motion--dot result-motion--dot-orange" aria-hidden="true" />
           <span className="result-motion result-motion--dot result-motion--dot-lime" aria-hidden="true" />
-          <span className="result-motion result-motion--cursor" aria-hidden="true" />
+          <span className="result-motion result-motion--dot result-motion--dot-pink" aria-hidden="true" />
+          <span className="result-motion result-motion--dot result-motion--dot-blue" aria-hidden="true" />
+          <span className="result-motion result-motion--dot result-motion--dot-mini" aria-hidden="true" />
           <Image
             src="/varya-photo.jpeg"
             alt={ui.photoAlt[lang]}
