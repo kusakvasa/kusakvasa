@@ -838,24 +838,6 @@
     transform-origin: right center;
   }
 
-  .result-chip-source {
-    color: var(--foreground);
-    font-size: 1rem;
-    font-weight: 920;
-    letter-spacing: 0;
-    line-height: 1.12;
-    margin-bottom: 2px;
-  }
-
-  .result-chip-period {
-    color: rgb(255 255 255 / 72%);
-    font-size: 0.88rem;
-    font-weight: 450;
-    letter-spacing: 0;
-    line-height: 1.18;
-    margin-bottom: 11px;
-  }
-
   .result-chip h3 {
     color: var(--pop-pink);
     font-size: 0.95rem;

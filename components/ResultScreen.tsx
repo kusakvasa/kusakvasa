@@ -3,7 +3,11 @@
 import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-react";
 import Image from "next/image";
 import { ui, OptionKey, TELEGRAM_URL } from "@/lib/content";
-import { selectPdfPath, selectResultBullets } from "@/lib/chipMapping";
+import {
+  selectPdfPath,
+  selectResultBullets,
+  type ResultBullet,
+} from "@/lib/chipMapping";
 import { useLang } from "./LangContext";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,9 +19,39 @@ interface ResultScreenProps {
   onBack: () => void;
 }
 
+interface ExperienceGroup {
+  key: string;
+  source: ResultBullet["source"];
+  period: ResultBullet["period"];
+  bullets: ResultBullet[];
+}
+
+function groupByExperience(bullets: ResultBullet[]): ExperienceGroup[] {
+  const order: string[] = [];
+  const map = new Map<string, ExperienceGroup>();
+  for (const bullet of bullets) {
+    const key = bullet.source.ru;
+    const existing = map.get(key);
+    if (existing) {
+      existing.bullets.push(bullet);
+    } else {
+      const group: ExperienceGroup = {
+        key,
+        source: bullet.source,
+        period: bullet.period,
+        bullets: [bullet],
+      };
+      map.set(key, group);
+      order.push(key);
+    }
+  }
+  return order.map((key) => map.get(key)!);
+}
+
 export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) {
   const { lang } = useLang();
   const bullets = selectResultBullets(q1, q2, q3);
+  const groups = groupByExperience(bullets);
   const pdfPath = selectPdfPath();
 
   return (
@@ -44,15 +78,23 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
         </div>
       </div>
 
-      <div className="flex flex-col gap-2.5">
-        {bullets.map((bullet) => (
-          <article key={bullet.id} className="result-chip">
-            <div className="result-chip-label">{bullet.label[lang]}</div>
-            <div className="result-chip-source">{bullet.source[lang]}</div>
-            <div className="result-chip-period">{bullet.period[lang]}</div>
-            <h3>{bullet.title[lang]}</h3>
-            <p>{bullet.description[lang]}</p>
-          </article>
+      <div className="flex flex-col gap-5">
+        {groups.map((group) => (
+          <section key={group.key} className="flex flex-col gap-2.5">
+            <header className="result-experience-heading">
+              <h2>{group.source[lang]}</h2>
+              <p>{group.period[lang]}</p>
+            </header>
+            <div className="flex flex-col gap-2.5">
+              {group.bullets.map((bullet) => (
+                <article key={bullet.id} className="result-chip">
+                  <div className="result-chip-label">{bullet.label[lang]}</div>
+                  <h3>{bullet.title[lang]}</h3>
+                  <p>{bullet.description[lang]}</p>
+                </article>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
 
