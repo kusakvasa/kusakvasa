@@ -1,10 +1,10 @@
 "use client";
 
 import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-react";
+import Image from "next/image";
 import { ui, OptionKey, TELEGRAM_URL } from "@/lib/content";
 import { practicumChips, smenaChips, filterChips, selectPdfPath } from "@/lib/chipMapping";
 import { useLang } from "./LangContext";
-import Avatar from "./Avatar";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +24,13 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
   return (
     <div className="flex flex-col gap-6 py-4">
       <div className="result-identity flex items-center gap-3">
-        <Avatar size={52} />
+        <Image
+          src="/varya-photo.jpeg"
+          alt={ui.photoAlt[lang]}
+          width={128}
+          height={128}
+          className="result-photo"
+        />
         <div>
           <h1 className="text-xl font-extrabold leading-tight tracking-normal">
             {ui.name[lang]}

@@ -278,23 +278,24 @@
     white-space: nowrap;
   }
 
-  .welcome-tag--yellow {
-    background: #fff233;
+  .welcome-tag--orange {
+    background: var(--pop-orange);
     transform: rotate(-2.5deg);
   }
 
-  .welcome-tag--green {
-    background: #38dc4f;
+  .welcome-tag--lime {
+    background: var(--pop-yellow);
     transform: rotate(1.8deg);
   }
 
-  .welcome-tag--pink {
-    background: #ff92bf;
+  .welcome-tag--blue {
+    background: var(--pop-blue);
+    color: var(--pop-pink);
     transform: rotate(-1.6deg);
   }
 
-  .welcome-tag--sky {
-    background: #91ccff;
+  .welcome-tag--mauve {
+    background: var(--pop-pink);
     transform: rotate(2.2deg);
   }
 
@@ -508,6 +509,17 @@
 
   .result-identity .text-muted-foreground {
     color: var(--pop-orange);
+  }
+
+  .result-photo {
+    height: 62px;
+    width: 62px;
+    flex: none;
+    border: 2px solid #000000;
+    border-radius: 44% 56% 47% 53% / 39% 42% 58% 61%;
+    object-fit: cover;
+    box-shadow: 4px 4px 0 var(--pop-blue);
+    transform: rotate(-3deg);
   }
 
   .result-label {

@@ -14,10 +14,10 @@ interface WelcomeScreenProps {
 export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
   const { lang } = useLang();
   const tagStyles = [
-    "welcome-tag--yellow",
-    "welcome-tag--green",
-    "welcome-tag--pink",
-    "welcome-tag--sky",
+    "welcome-tag--orange",
+    "welcome-tag--lime",
+    "welcome-tag--blue",
+    "welcome-tag--mauve",
   ];
 
   return (

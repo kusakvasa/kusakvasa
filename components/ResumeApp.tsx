@@ -42,7 +42,7 @@ function App() {
           <LangToggle />
         </div>
 
-        <div className="relative overflow-hidden">
+        <div className="relative">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={step}
