@@ -23,8 +23,12 @@ export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
   return (
     <div className="flex flex-col items-center gap-6 py-5 text-center">
       <div className="welcome-avatar-stage">
-        <span className="welcome-avatar-slice bg-pop-orange" aria-hidden="true" />
-        <span className="welcome-avatar-slice welcome-avatar-slice--sky bg-pop-blue" aria-hidden="true" />
+        <span className="avatar-motion avatar-motion--orbit" aria-hidden="true" />
+        <span className="avatar-motion avatar-motion--dot avatar-motion--dot-orange" aria-hidden="true" />
+        <span className="avatar-motion avatar-motion--dot avatar-motion--dot-lime" aria-hidden="true" />
+        <span className="avatar-motion avatar-motion--dot avatar-motion--dot-blue" aria-hidden="true" />
+        <span className="avatar-motion avatar-motion--cursor avatar-motion--cursor-pink" aria-hidden="true" />
+        <span className="avatar-motion avatar-motion--cursor avatar-motion--cursor-yellow" aria-hidden="true" />
         <Image
           src="/varya-photo.jpeg"
           alt={ui.photoAlt[lang]}
