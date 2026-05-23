@@ -872,13 +872,13 @@
     border: none;
     background: transparent;
     color: var(--foreground);
-    padding: 36px 16px 14px 28px;
+    padding: 12px 16px 12px 28px;
   }
 
   .result-chip::before {
     content: "";
     position: absolute;
-    top: 38px;
+    top: 14px;
     left: 0;
     height: 18px;
     width: 18px;
@@ -907,31 +907,6 @@
     }
   }
 
-  .result-chip-label {
-    position: absolute;
-    top: 10px;
-    right: -8px;
-    z-index: 1;
-    display: inline-flex;
-    max-width: min(72%, 236px);
-    min-height: 25px;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #000000;
-    border-radius: 999px 14px 999px 999px;
-    background: var(--pop-yellow);
-    box-shadow: 3px 3px 0 var(--pop-blue);
-    color: #000000;
-    padding: 5px 10px;
-    font-size: 0.72rem;
-    font-weight: 950;
-    letter-spacing: 0;
-    line-height: 1.05;
-    text-align: center;
-    transform: rotate(1.5deg);
-    transform-origin: right center;
-  }
-
   .result-chip h3 {
     color: var(--pop-pink);
     font-size: 0.95rem;
@@ -954,29 +929,13 @@
     animation-delay: -1.3s;
   }
 
-  .result-chip:nth-child(4n + 2) .result-chip-label {
-    background: var(--pop-orange);
-    box-shadow: 3px 3px 0 var(--pop-pink);
-  }
-
   .result-chip:nth-child(4n + 3)::before {
     background: var(--pop-blue);
     animation-delay: -2.6s;
   }
 
-  .result-chip:nth-child(4n + 3) .result-chip-label {
-    background: var(--pop-blue);
-    box-shadow: 3px 3px 0 var(--pop-yellow);
-    color: #ffffff;
-  }
-
   .result-chip:nth-child(4n + 4)::before {
     background: var(--pop-pink);
     animation-delay: -0.7s;
-  }
-
-  .result-chip:nth-child(4n + 4) .result-chip-label {
-    background: var(--pop-pink);
-    box-shadow: 3px 3px 0 var(--pop-orange);
   }
 }
