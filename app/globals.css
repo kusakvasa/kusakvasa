@@ -500,11 +500,10 @@
   }
 
   .result-identity {
-    border: 2px solid #000000;
     border-radius: 22px;
-    background: #ffffff;
-    color: #000000;
-    padding: 10px;
+    background: transparent;
+    color: var(--foreground);
+    padding: 0;
   }
 
   .result-identity .text-muted-foreground {
@@ -548,10 +547,22 @@
   }
 
   .result-chip {
-    border: 2px solid #000000;
+    border: 6px dashed var(--pop-orange);
     border-radius: 18px;
-    background: #ffffff;
-    color: #000000;
+    background: transparent;
+    color: var(--foreground);
     padding: 14px 16px;
+  }
+
+  .result-chip:nth-child(4n + 2) {
+    border-color: var(--pop-yellow);
+  }
+
+  .result-chip:nth-child(4n + 3) {
+    border-color: var(--pop-blue);
+  }
+
+  .result-chip:nth-child(4n + 4) {
+    border-color: var(--pop-pink);
   }
 }
