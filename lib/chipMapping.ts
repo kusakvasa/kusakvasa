@@ -60,7 +60,7 @@ export const resultBullets: ResultBullet[] = [
       q2: ["A", "C"],
       q3: ["A", "C", "D"],
     },
-    priority: 100,
+    priority: 110,
   },
   {
     id: "practicum-metric-tree",
@@ -89,7 +89,7 @@ export const resultBullets: ResultBullet[] = [
       q2: ["A"],
       q3: ["A", "C"],
     },
-    priority: 88,
+    priority: 96,
   },
   {
     id: "practicum-segmentation-audit",
@@ -115,10 +115,10 @@ export const resultBullets: ResultBullet[] = [
     },
     tags: {
       q1: ["B", "C"],
-      q2: ["A"],
+      q2: ["A", "B"],
       q3: ["A", "C"],
     },
-    priority: 82,
+    priority: 88,
   },
   {
     id: "practicum-data-process",
@@ -147,7 +147,7 @@ export const resultBullets: ResultBullet[] = [
       q2: ["A", "C"],
       q3: ["A", "D"],
     },
-    priority: 78,
+    priority: 86,
   },
   {
     id: "practicum-change-team",
@@ -174,9 +174,9 @@ export const resultBullets: ResultBullet[] = [
     tags: {
       q1: ["B", "D"],
       q2: ["C", "D"],
-      q3: ["D"],
+      q3: ["A", "D"],
     },
-    priority: 94,
+    priority: 100,
   },
   {
     id: "smena-repositioning",
@@ -205,7 +205,7 @@ export const resultBullets: ResultBullet[] = [
       q2: ["A", "B"],
       q3: ["A", "B", "C"],
     },
-    priority: 96,
+    priority: 105,
   },
   {
     id: "smena-sellout",
@@ -234,7 +234,7 @@ export const resultBullets: ResultBullet[] = [
       q2: ["B"],
       q3: ["B", "C"],
     },
-    priority: 92,
+    priority: 100,
   },
   {
     id: "archstoyanie-partners",
@@ -263,7 +263,7 @@ export const resultBullets: ResultBullet[] = [
       q2: ["B", "D"],
       q3: ["B", "C", "D"],
     },
-    priority: 90,
+    priority: 98,
   },
   {
     id: "founder-pnl",
@@ -288,11 +288,11 @@ export const resultBullets: ResultBullet[] = [
       en: "As the founder of a travel community, owned P&L, marketing, product lineup, and trip operations.",
     },
     tags: {
-      q1: ["A", "C", "D"],
-      q2: ["B", "D"],
-      q3: ["B", "C", "D"],
+      q1: ["A"],
+      q2: [],
+      q3: ["B"],
     },
-    priority: 84,
+    priority: 40,
   },
   {
     id: "jtbd-soldout",
@@ -317,69 +317,11 @@ export const resultBullets: ResultBullet[] = [
       en: "JTBD interviews helped choose trip duration and locations; some trips sold out within a day.",
     },
     tags: {
-      q1: ["A", "C"],
-      q2: ["A", "B"],
-      q3: ["B", "C"],
-    },
-    priority: 72,
-  },
-  {
-    id: "ai-book",
-    source: {
-      ru: "Менеджер проектов @ Аркадий Сандлер",
-      en: "Project Manager @ Arkady Sandler",
-    },
-    period: {
-      ru: "2021 — 2023",
-      en: "2021 — 2023",
-    },
-    label: {
-      ru: "AI-контент",
-      en: "AI content",
-    },
-    title: {
-      ru: "Довела сложный контент до готового продукта",
-      en: "Turned complex content into a finished product",
-    },
-    description: {
-      ru: "Прошла путь от большого Excel-файла до книги по искусственному интеллекту тиражом 1000 экземпляров.",
-      en: "Took an artificial intelligence book from a large Excel file to a finished 1,000-copy print run.",
-    },
-    tags: {
-      q1: ["A", "B"],
-      q2: ["B", "C"],
+      q1: ["A"],
+      q2: [],
       q3: ["B"],
     },
-    priority: 70,
-  },
-  {
-    id: "voice-assistant-research",
-    source: {
-      ru: "Менеджер проектов @ Аркадий Сандлер",
-      en: "Project Manager @ Arkady Sandler",
-    },
-    period: {
-      ru: "2021 — 2023",
-      en: "2021 — 2023",
-    },
-    label: {
-      ru: "исследование",
-      en: "research",
-    },
-    title: {
-      ru: "Организовала исследование на 1000+ участников",
-      en: "Ran research with 1,000+ participants",
-    },
-    description: {
-      ru: "Собрала трёхэтапное исследование о голосовых ассистентах и довела его до B2B-руководства.",
-      en: "Organized a three-stage study on voice assistants and turned it into a B2B guide.",
-    },
-    tags: {
-      q1: ["A", "B", "D"],
-      q2: ["A", "D"],
-      q3: ["A", "B", "D"],
-    },
-    priority: 68,
+    priority: 35,
   },
 ];
 
