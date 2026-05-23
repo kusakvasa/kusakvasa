@@ -3,7 +3,7 @@
 import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-react";
 import Image from "next/image";
 import { ui, OptionKey, TELEGRAM_URL } from "@/lib/content";
-import { practicumChips, smenaChips, filterChips, selectPdfPath } from "@/lib/chipMapping";
+import { selectPdfPath, selectResultBullets } from "@/lib/chipMapping";
 import { useLang } from "./LangContext";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,20 +17,25 @@ interface ResultScreenProps {
 
 export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) {
   const { lang } = useLang();
-  const practicum = filterChips(practicumChips, q1);
-  const smena = filterChips(smenaChips, q1);
-  const pdfPath = selectPdfPath(q2, q3);
+  const bullets = selectResultBullets(q1, q2, q3);
+  const pdfPath = selectPdfPath();
 
   return (
     <div className="flex flex-col gap-6 py-4">
       <div className="result-identity flex items-center gap-3">
-        <Image
-          src="/varya-photo.jpeg"
-          alt={ui.photoAlt[lang]}
-          width={128}
-          height={128}
-          className="result-photo"
-        />
+        <div className="result-avatar-stage">
+          <span className="result-motion result-motion--orbit" aria-hidden="true" />
+          <span className="result-motion result-motion--dot result-motion--dot-orange" aria-hidden="true" />
+          <span className="result-motion result-motion--dot result-motion--dot-lime" aria-hidden="true" />
+          <span className="result-motion result-motion--cursor" aria-hidden="true" />
+          <Image
+            src="/varya-photo.jpeg"
+            alt={ui.photoAlt[lang]}
+            width={128}
+            height={128}
+            className="result-photo"
+          />
+        </div>
         <div>
           <h1 className="text-xl font-extrabold leading-tight tracking-normal">
             {ui.name[lang]}
@@ -39,38 +44,14 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
-        <div className="result-experience-heading">
-          <h2>{ui.practicumTitle[lang]}</h2>
-          <p>{ui.practicumDates[lang]}</p>
-        </div>
-        <div className="flex flex-col gap-2">
-          {practicum.map((chip) => (
-            <div
-              key={chip.id}
-              className="result-chip text-sm leading-snug"
-            >
-              {chip[lang]}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-3">
-        <div className="result-experience-heading">
-          <h2>{ui.smenaTitle[lang]}</h2>
-          <p>{ui.smenaDates[lang]}</p>
-        </div>
-        <div className="flex flex-col gap-2">
-          {smena.map((chip) => (
-            <div
-              key={chip.id}
-              className="result-chip text-sm leading-snug"
-            >
-              {chip[lang]}
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col gap-2.5">
+        {bullets.map((bullet) => (
+          <article key={bullet.id} className="result-chip">
+            <div className="result-chip-source">{bullet.source[lang]}</div>
+            <h3>{bullet.title[lang]}</h3>
+            <p>{bullet.description[lang]}</p>
+          </article>
+        ))}
       </div>
 
       <div className="action-stack flex flex-col gap-2 pt-2">

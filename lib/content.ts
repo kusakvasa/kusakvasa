@@ -67,41 +67,44 @@ export const questions: Question[] = [
   {
     id: "q1",
     title: {
-      ru: "Что вам важно в PM прямо сейчас?",
-      en: "What do you need from a PM right now?",
+      ru: "Что нужно сделать в первые месяцы?",
+      en: "What needs to happen in the first months?",
     },
     options: [
       {
         key: "A",
-        icon: "IconChartBar",
-        title: { ru: "Аналитика и метрики", en: "Analytics & metrics" },
-        hint: { ru: "данные, дашборды, SQL", en: "data, dashboards, SQL" },
+        icon: "IconRocket",
+        title: { ru: "Запустить новое", en: "Launch something new" },
+        hint: {
+          ru: "проект, продукт, рынок, инициативу",
+          en: "project, product, market, initiative",
+        },
       },
       {
         key: "B",
-        icon: "IconRocket",
-        title: { ru: "Запуск и рост продукта", en: "Product launch & growth" },
+        icon: "IconSettings",
+        title: { ru: "Навести порядок в процессе", en: "Bring order to a process" },
         hint: {
-          ru: "выводить фичи, считать unit-экономику",
-          en: "shipping features, unit economics",
+          ru: "разложить хаос, убрать узкие места",
+          en: "untangle chaos, remove bottlenecks",
         },
       },
       {
         key: "C",
-        icon: "IconSettings",
-        title: { ru: "Эффективность процессов", en: "Process efficiency" },
+        icon: "IconRefresh",
+        title: { ru: "Повысить эффективность", en: "Improve efficiency" },
         hint: {
-          ru: "автоматизация, снижение ручного труда",
-          en: "automation, less manual work",
+          ru: "сократить ручной труд, улучшить метрики",
+          en: "reduce manual work, improve metrics",
         },
       },
       {
         key: "D",
         icon: "IconUsers",
-        title: { ru: "Команда и люди", en: "Team & people" },
+        title: { ru: "Собрать людей вокруг задачи", en: "Align people around the work" },
         hint: {
-          ru: "онбординг, обучение, рост команды",
-          en: "onboarding, training, team growth",
+          ru: "стейкхолдеры, партнёры, команда",
+          en: "stakeholders, partners, team",
         },
       },
       {
@@ -115,50 +118,50 @@ export const questions: Question[] = [
   {
     id: "q2",
     title: {
-      ru: "Какие навыки важны для вашей задачи?",
-      en: "Which skills matter most for your role?",
+      ru: "Где сейчас главное трение?",
+      en: "Where is the main friction right now?",
     },
     options: [
       {
         key: "A",
-        icon: "IconBrain",
-        title: { ru: "Системное мышление", en: "Systems thinking" },
+        icon: "IconChartBar",
+        title: { ru: "Непрозрачные данные", en: "Unclear data" },
         hint: {
-          ru: "понимание архитектуры, а не только инструментов",
-          en: "architecture, not just tools",
+          ru: "нет метрик, дашбордов, единой картины",
+          en: "no metrics, dashboards, shared picture",
         },
       },
       {
         key: "B",
         icon: "IconPackage",
         title: {
-          ru: "Запуск и доставка фич",
-          en: "Shipping & delivery",
+          ru: "Идеи застревают до запуска",
+          en: "Ideas get stuck before launch",
         },
         hint: {
-          ru: "от идеи до прода, быстро и без потерь",
-          en: "idea to prod, fast and clean",
+          ru: "много стримов, рисков, зависимостей",
+          en: "many streams, risks, dependencies",
         },
       },
       {
         key: "C",
         icon: "IconRefresh",
         title: {
-          ru: "Эффективность и автоматизация",
-          en: "Efficiency & automation",
+          ru: "Слишком много ручного труда",
+          en: "Too much manual work",
         },
         hint: {
-          ru: "убрать ручной труд, выстроить процессы",
-          en: "kill manual work, build processes",
+          ru: "процесс медленный и плохо масштабируется",
+          en: "the process is slow and hard to scale",
         },
       },
       {
         key: "D",
-        icon: "IconSchool",
-        title: { ru: "Рост команды", en: "Team growth" },
+        icon: "IconSitemap",
+        title: { ru: "Сложно синхронизировать людей", en: "Hard to sync people" },
         hint: {
-          ru: "онбординг, обучение, передача знаний",
-          en: "onboarding, training, knowledge sharing",
+          ru: "много команд, согласований, интересов",
+          en: "many teams, approvals, interests",
         },
       },
       {
@@ -172,50 +175,50 @@ export const questions: Question[] = [
   {
     id: "q3",
     title: {
-      ru: "С какой командой вы работаете?",
-      en: "What kind of team are you building for?",
+      ru: "Как выглядит успех?",
+      en: "What does success look like?",
     },
     options: [
       {
         key: "A",
-        icon: "IconBuildingFactory2",
-        title: { ru: "Стартап / быстрый рост", en: "Startup / fast growth" },
+        icon: "IconChartBar",
+        title: { ru: "Появилась ясная картина в цифрах", en: "The numbers are clear" },
         hint: {
-          ru: "скорость важнее процессов",
-          en: "speed over process",
+          ru: "метрики, мониторинг, понятный статус",
+          en: "metrics, monitoring, clear status",
         },
       },
       {
         key: "B",
-        icon: "IconBuilding",
-        title: { ru: "Корпорация", en: "Corporation" },
+        icon: "IconRocket",
+        title: { ru: "Проект вышел в срок и без развала", en: "The project shipped on time" },
         hint: {
-          ru: "процессы, стейкхолдеры, согласования",
-          en: "processes, stakeholders, approvals",
+          ru: "от идеи до запуска, с контролем рисков",
+          en: "idea to launch, risks under control",
         },
       },
       {
         key: "C",
-        icon: "IconSitemap",
+        icon: "IconTrendingUp",
         title: {
-          ru: "Кросс-функциональная команда",
-          en: "Cross-functional team",
+          ru: "Есть измеримый бизнес-эффект",
+          en: "There is measurable business impact",
         },
         hint: {
-          ru: "дизайн, разработка, аналитика вместе",
-          en: "design, dev, analytics together",
+          ru: "ROI, P&L, экономия времени или ресурсов",
+          en: "ROI, P&L, saved time or resources",
         },
       },
       {
         key: "D",
-        icon: "IconTrendingUp",
+        icon: "IconUsers",
         title: {
-          ru: "Есть аналитики в команде",
-          en: "Has analysts on the team",
+          ru: "Команда или партнёры работают устойчивее",
+          en: "Team or partners work more steadily",
         },
         hint: {
-          ru: "важно говорить с ними на одном языке",
-          en: "need to speak their language",
+          ru: "меньше блокеров, лучше онбординг и ритм",
+          en: "fewer blockers, better onboarding and rhythm",
         },
       },
       {

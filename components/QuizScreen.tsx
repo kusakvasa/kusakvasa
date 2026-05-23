@@ -124,7 +124,7 @@ export default function QuizScreen({
                   </div>
                   {opt.hint[lang] && (
                     <div className={cn(
-                      "mt-0.5 truncate text-xs font-semibold",
+                      "mt-0.5 text-xs font-semibold leading-snug whitespace-normal",
                       isNone ? "text-current/70" : hintTone
                     )}>
                       {opt.hint[lang]}
