@@ -318,18 +318,68 @@
     color: rgb(255 255 255 / 58%);
   }
 
+  .action-stack {
+    gap: 10px;
+    width: 100%;
+    padding-inline: 2px;
+  }
+
+  .action-button {
+    transform-origin: center;
+    transition:
+      filter 0.16s ease,
+      transform 0.16s ease;
+    width: 100%;
+  }
+
+  .action-stack > .action-button:nth-child(1) {
+    align-self: flex-start;
+    width: calc(100% - 48px);
+    transform: rotate(-1deg);
+  }
+
+  .action-stack > .action-button:nth-child(2) {
+    align-self: flex-end;
+    width: calc(100% - 70px);
+    transform: rotate(1.1deg);
+  }
+
+  .action-stack > .action-button:nth-child(3) {
+    align-self: center;
+    width: calc(100% - 94px);
+    transform: rotate(-0.7deg);
+  }
+
+  .action-button:hover {
+    filter: brightness(1.04);
+  }
+
+  .action-stack .game-cta {
+    min-height: 58px;
+    border: 2px solid #000000 !important;
+    border-radius: 999px 30px 999px 38px !important;
+    background: var(--pop-yellow) !important;
+    box-shadow: 5px 5px 0 var(--pop-blue);
+  }
+
+  .action-stack .game-cta:hover {
+    background: var(--pop-yellow) !important;
+  }
+
   .game-back {
     min-height: 48px;
-    border-radius: 999px !important;
+    border: 2px dashed rgb(255 255 255 / 28%) !important;
+    border-radius: 999px 24px 999px 28px !important;
+    background: transparent !important;
     color: rgb(255 255 255 / 84%);
     font-weight: 800;
   }
 
   .welcome-skip {
-    min-height: 48px;
-    border: 2px dashed rgb(255 255 255 / 28%);
-    border-radius: 18px 999px 18px 999px !important;
-    background: rgb(255 255 255 / 5%);
+    min-height: 50px;
+    border: 2px dashed var(--pop-pink) !important;
+    border-radius: 28px 999px 34px 999px !important;
+    background: transparent !important;
     color: var(--foreground);
     line-height: 1.15;
     white-space: normal;
@@ -337,12 +387,11 @@
 
   .game-outline {
     min-height: 54px;
-    border: 2px solid rgb(255 255 255 / 22%);
-    border-radius: 18px 999px 18px 999px !important;
-    background: rgb(255 255 255 / 6%);
+    border: 2px dashed var(--pop-blue) !important;
+    border-radius: 34px 999px 999px 28px !important;
+    background: transparent !important;
     color: var(--foreground);
-    font-weight: 900;
-    box-shadow: 4px 4px 0 var(--pop-blue);
+    font-weight: 800;
   }
 
   .quiz-meter {
@@ -529,7 +578,7 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    color: var(--pop-pink);
+    color: var(--foreground);
   }
 
   .result-experience-heading h2 {
@@ -547,10 +596,11 @@
   }
 
   .result-chip {
-    border: 6px dashed var(--pop-orange);
+    border: 2px dashed var(--pop-orange);
     border-radius: 18px;
     background: transparent;
     color: var(--foreground);
+    font-weight: 400;
     padding: 14px 16px;
   }
 

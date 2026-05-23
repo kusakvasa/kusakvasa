@@ -48,7 +48,7 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
           {practicum.map((chip) => (
             <div
               key={chip.id}
-              className="result-chip text-sm font-semibold leading-snug"
+              className="result-chip text-sm leading-snug"
             >
               {chip[lang]}
             </div>
@@ -65,7 +65,7 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
           {smena.map((chip) => (
             <div
               key={chip.id}
-              className="result-chip text-sm font-semibold leading-snug"
+              className="result-chip text-sm leading-snug"
             >
               {chip[lang]}
             </div>
@@ -73,13 +73,13 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 pt-2">
+      <div className="action-stack flex flex-col gap-2 pt-2">
         <a
           href={pdfPath}
           download="Варвара_Федорова_резюме.pdf"
           className={cn(
             buttonVariants({ size: "lg" }),
-            "game-cta w-full gap-2 font-extrabold text-black"
+            "game-cta action-button gap-2 font-extrabold text-black"
           )}
         >
           <IconDownload size={16} />
@@ -91,13 +91,13 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
           rel="noopener noreferrer"
           className={cn(
             buttonVariants({ variant: "outline", size: "lg" }),
-            "game-outline w-full gap-2"
+            "game-outline action-button gap-2"
           )}
         >
           <IconBrandTelegram size={16} />
           {ui.contactTg[lang]}
         </a>
-        <Button onClick={onBack} variant="ghost" size="lg" className="game-back w-full">
+        <Button onClick={onBack} variant="ghost" size="lg" className="game-back action-button">
           <IconArrowLeft size={16} />
           {ui.back[lang]}
         </Button>

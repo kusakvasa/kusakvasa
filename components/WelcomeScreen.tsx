@@ -55,10 +55,10 @@ export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
       <p className="max-w-[320px] text-sm font-medium leading-relaxed text-muted-foreground">
         {ui.welcomeText[lang]}
       </p>
-      <div className="flex flex-col items-center gap-2 w-full">
+      <div className="action-stack flex flex-col items-center gap-2 w-full">
         <Button
           onClick={onStart}
-          className="game-cta w-full font-extrabold text-black"
+          className="game-cta action-button font-extrabold text-black"
           size="lg"
         >
           {ui.cta[lang]}
@@ -67,7 +67,7 @@ export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
         <Button
           onClick={onSkip}
           variant="ghost"
-          className="welcome-skip w-full text-center font-bold"
+          className="welcome-skip action-button text-center font-bold"
           size="lg"
         >
           {ui.skipCta[lang]}
