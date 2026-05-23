@@ -16,7 +16,7 @@ export interface Question {
 }
 
 export const ui = {
-  name: { ru: "Варя Фёдорова", en: "Varya Fedorova" },
+  name: { ru: "Варя Фёдорова", en: "Varvara Fedorova" },
   role: { ru: "Менеджер проектов", en: "Project Manager" },
   photoAlt: { ru: "Портрет Вари Фёдоровой", en: "Portrait of Varya Fedorova" },
   welcomeText: {

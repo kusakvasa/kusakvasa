@@ -49,13 +49,10 @@ export default function QuizScreen({
   }
 
   const popColors = [
-    "answer-color-yellow",
-    "answer-color-green",
     "answer-color-orange",
+    "answer-color-yellow",
     "answer-color-blue",
     "answer-color-pink",
-    "answer-color-red",
-    "answer-color-sky",
   ];
 
   const optionShapes = [
@@ -93,6 +90,9 @@ export default function QuizScreen({
           const isNone = opt.key === "none";
           const OptionIcon = iconMap[opt.icon] ?? IconMoodConfuzed;
           const color = popColors[i % popColors.length];
+          const isBlue = color === "answer-color-blue";
+          const textTone = isBlue ? "text-white" : "text-black";
+          const hintTone = isBlue ? "text-white/75" : "text-black/65";
           return (
             <button
               key={opt.key}
@@ -106,8 +106,8 @@ export default function QuizScreen({
                     ? "answer-piece--none answer-piece--selected text-foreground"
                     : "answer-piece--none text-muted-foreground"
                   : isSelected
-                  ? `${color} answer-piece--selected text-black font-semibold`
-                  : `${color} text-black`
+                  ? `${color} answer-piece--selected ${textTone} font-semibold`
+                  : `${color} ${textTone}`
               )}
             >
               <div className="flex items-center gap-3">
@@ -115,7 +115,7 @@ export default function QuizScreen({
                   size={20}
                   className={cn(
                     "answer-icon shrink-0",
-                    isNone ? "text-current" : "text-black"
+                    isNone ? "text-current" : textTone
                   )}
                 />
                 <div className="flex-1 min-w-0">
@@ -125,7 +125,7 @@ export default function QuizScreen({
                   {opt.hint[lang] && (
                     <div className={cn(
                       "mt-0.5 truncate text-xs font-semibold",
-                      isNone ? "text-current/70" : "text-black/65"
+                      isNone ? "text-current/70" : hintTone
                     )}>
                       {opt.hint[lang]}
                     </div>

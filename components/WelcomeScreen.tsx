@@ -5,7 +5,6 @@ import Image from "next/image";
 import { ui } from "@/lib/content";
 import { useLang } from "./LangContext";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 interface WelcomeScreenProps {
   onStart: () => void;
@@ -15,17 +14,17 @@ interface WelcomeScreenProps {
 export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
   const { lang } = useLang();
   const tagStyles = [
-    "bg-pop-yellow welcome-tag--pill",
-    "bg-pop-green welcome-tag--slug",
-    "bg-pop-pink welcome-tag--pebble",
-    "bg-pop-sky welcome-tag--ticket",
+    "welcome-tag--yellow",
+    "welcome-tag--green",
+    "welcome-tag--pink",
+    "welcome-tag--sky",
   ];
 
   return (
     <div className="flex flex-col items-center gap-6 py-5 text-center">
       <div className="welcome-avatar-stage">
         <span className="welcome-avatar-slice bg-pop-orange" aria-hidden="true" />
-        <span className="welcome-avatar-slice welcome-avatar-slice--sky bg-pop-sky" aria-hidden="true" />
+        <span className="welcome-avatar-slice welcome-avatar-slice--sky bg-pop-blue" aria-hidden="true" />
         <Image
           src="/varya-photo.jpeg"
           alt={ui.photoAlt[lang]}
@@ -35,21 +34,21 @@ export default function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
           priority
         />
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <h1 className="max-w-[360px] text-[2.6rem] font-extrabold leading-[0.92] tracking-normal">
+      <div className="flex flex-col items-center gap-1">
+        <h1 className="welcome-title">
           {ui.name[lang]}
         </h1>
-        <p className="role-chip text-sm font-bold">{ui.role[lang]}</p>
+        <p className="role-chip text-sm font-extrabold">{ui.role[lang]}</p>
       </div>
       <div className="welcome-tag-board">
         {ui.welcomeTags.map((tag, i) => {
           return (
-            <Badge
+            <span
               key={i}
-              className={`${tagStyles[i % tagStyles.length]} welcome-tag border-0 text-black`}
+              className={`${tagStyles[i % tagStyles.length]} welcome-tag`}
             >
               {tag[lang]}
-            </Badge>
+            </span>
           );
         })}
       </div>
