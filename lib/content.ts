@@ -39,6 +39,22 @@ export const ui = {
   contactTg: { ru: "Написать в Telegram", en: "Contact on Telegram" },
   practicumLabel: { ru: "Яндекс.Практикум", en: "Yandex Practicum" },
   smenaLabel: { ru: "Станция Смена", en: "Station Smena" },
+  practicumTitle: {
+    ru: "Менеджер проектов @ Яндекс Практикум",
+    en: "Project Manager @ Yandex Practicum",
+  },
+  practicumDates: {
+    ru: "май 2023 — настоящее время",
+    en: "May 2023 — Present",
+  },
+  smenaTitle: {
+    ru: "B2C Менеджер продукта @ Станция Смена",
+    en: "B2C Product Manager @ Station Smena",
+  },
+  smenaDates: {
+    ru: "ноябрь 2024 - март 2026",
+    en: "November 2024 - March 2026",
+  },
   welcomeTags: [
     { ru: "data-driven (how else)", en: "data-driven (how else)" },
     { ru: "оптимизация процессов", en: "process optimization" },

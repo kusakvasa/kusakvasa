@@ -40,9 +40,10 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="result-label text-xs font-bold uppercase text-muted-foreground">
-          {ui.practicumLabel[lang]}
-        </h2>
+        <div className="result-experience-heading">
+          <h2>{ui.practicumTitle[lang]}</h2>
+          <p>{ui.practicumDates[lang]}</p>
+        </div>
         <div className="flex flex-col gap-2">
           {practicum.map((chip) => (
             <div
@@ -56,9 +57,10 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="result-label text-xs font-bold uppercase text-muted-foreground">
-          {ui.smenaLabel[lang]}
-        </h2>
+        <div className="result-experience-heading">
+          <h2>{ui.smenaTitle[lang]}</h2>
+          <p>{ui.smenaDates[lang]}</p>
+        </div>
         <div className="flex flex-col gap-2">
           {smena.map((chip) => (
             <div
