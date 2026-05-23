@@ -804,25 +804,61 @@
   }
 
   .result-chip {
+    position: relative;
+    overflow: visible;
     border: 2px dashed color-mix(in srgb, var(--pop-orange) 50%, transparent);
     border-radius: 18px;
     background: transparent;
     color: var(--foreground);
-    padding: 14px 16px;
+    padding: 36px 16px 14px;
+  }
+
+  .result-chip-label {
+    position: absolute;
+    top: 10px;
+    right: -8px;
+    z-index: 1;
+    display: inline-flex;
+    max-width: min(72%, 236px);
+    min-height: 25px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    border-radius: 999px 14px 999px 999px;
+    background: var(--pop-yellow);
+    box-shadow: 3px 3px 0 var(--pop-blue);
+    color: #000000;
+    padding: 5px 10px;
+    font-size: 0.72rem;
+    font-weight: 950;
+    letter-spacing: 0;
+    line-height: 1.05;
+    text-align: center;
+    transform: rotate(1.5deg);
+    transform-origin: right center;
   }
 
   .result-chip-source {
-    color: var(--pop-pink);
-    font-size: 0.72rem;
-    font-weight: 850;
+    color: var(--foreground);
+    font-size: 1rem;
+    font-weight: 920;
     letter-spacing: 0;
-    line-height: 1.1;
-    margin-bottom: 7px;
+    line-height: 1.12;
+    margin-bottom: 2px;
+  }
+
+  .result-chip-period {
+    color: rgb(255 255 255 / 72%);
+    font-size: 0.88rem;
+    font-weight: 450;
+    letter-spacing: 0;
+    line-height: 1.18;
+    margin-bottom: 11px;
   }
 
   .result-chip h3 {
-    color: var(--foreground);
-    font-size: 1rem;
+    color: var(--pop-pink);
+    font-size: 0.95rem;
     font-weight: 920;
     letter-spacing: 0;
     line-height: 1.12;
@@ -841,11 +877,27 @@
     border-color: color-mix(in srgb, var(--pop-yellow) 50%, transparent);
   }
 
+  .result-chip:nth-child(4n + 2) .result-chip-label {
+    background: var(--pop-orange);
+    box-shadow: 3px 3px 0 var(--pop-pink);
+  }
+
   .result-chip:nth-child(4n + 3) {
     border-color: color-mix(in srgb, var(--pop-blue) 50%, transparent);
   }
 
+  .result-chip:nth-child(4n + 3) .result-chip-label {
+    background: var(--pop-blue);
+    box-shadow: 3px 3px 0 var(--pop-yellow);
+    color: #ffffff;
+  }
+
   .result-chip:nth-child(4n + 4) {
     border-color: color-mix(in srgb, var(--pop-pink) 50%, transparent);
+  }
+
+  .result-chip:nth-child(4n + 4) .result-chip-label {
+    background: var(--pop-pink);
+    box-shadow: 3px 3px 0 var(--pop-orange);
   }
 }

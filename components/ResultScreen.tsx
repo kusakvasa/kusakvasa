@@ -47,7 +47,9 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
       <div className="flex flex-col gap-2.5">
         {bullets.map((bullet) => (
           <article key={bullet.id} className="result-chip">
+            <div className="result-chip-label">{bullet.label[lang]}</div>
             <div className="result-chip-source">{bullet.source[lang]}</div>
+            <div className="result-chip-period">{bullet.period[lang]}</div>
             <h3>{bullet.title[lang]}</h3>
             <p>{bullet.description[lang]}</p>
           </article>

@@ -11,6 +11,8 @@ interface LocalizedText {
 export interface ResultBullet {
   id: string;
   source: LocalizedText;
+  period: LocalizedText;
+  label: LocalizedText;
   title: LocalizedText;
   description: LocalizedText;
   tags: Record<QuestionId, AnswerKey[]>;
@@ -34,8 +36,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "practicum-dashboards",
     source: {
-      ru: "Яндекс Практикум · аналитика и процессы",
-      en: "Yandex Practicum · analytics and processes",
+      ru: "Менеджер проектов @ Яндекс Практикум",
+      en: "Project Manager @ Yandex Practicum",
+    },
+    period: {
+      ru: "май 2023 — настоящее время",
+      en: "May 2023 — Present",
+    },
+    label: {
+      ru: "аналитика и процессы",
+      en: "analytics and processes",
     },
     title: {
       ru: "Перевела ручной сбор данных в дашборды",
@@ -55,8 +65,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "practicum-metric-tree",
     source: {
-      ru: "Яндекс Практикум · управление метриками",
-      en: "Yandex Practicum · metrics management",
+      ru: "Менеджер проектов @ Яндекс Практикум",
+      en: "Project Manager @ Yandex Practicum",
+    },
+    period: {
+      ru: "май 2023 — настоящее время",
+      en: "May 2023 — Present",
+    },
+    label: {
+      ru: "управление метриками",
+      en: "metrics management",
     },
     title: {
       ru: "Собрала дерево метрик под бизнес-цели",
@@ -76,8 +94,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "practicum-segmentation-audit",
     source: {
-      ru: "Яндекс Практикум · продуктовая аналитика",
-      en: "Yandex Practicum · product analytics",
+      ru: "Менеджер проектов @ Яндекс Практикум",
+      en: "Project Manager @ Yandex Practicum",
+    },
+    period: {
+      ru: "май 2023 — настоящее время",
+      en: "May 2023 — Present",
+    },
+    label: {
+      ru: "продуктовая аналитика",
+      en: "product analytics",
     },
     title: {
       ru: "Проверила сегментацию цифрами",
@@ -97,8 +123,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "practicum-data-process",
     source: {
-      ru: "Яндекс Практикум · масштабирование процессов",
-      en: "Yandex Practicum · process scaling",
+      ru: "Менеджер проектов @ Яндекс Практикум",
+      en: "Project Manager @ Yandex Practicum",
+    },
+    period: {
+      ru: "май 2023 — настоящее время",
+      en: "May 2023 — Present",
+    },
+    label: {
+      ru: "масштабирование процессов",
+      en: "process scaling",
     },
     title: {
       ru: "Унифицировала данные по десяткам профессий",
@@ -118,8 +152,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "practicum-change-team",
     source: {
-      ru: "Яндекс Практикум · изменения в команде",
-      en: "Yandex Practicum · team change",
+      ru: "Менеджер проектов @ Яндекс Практикум",
+      en: "Project Manager @ Yandex Practicum",
+    },
+    period: {
+      ru: "май 2023 — настоящее время",
+      en: "May 2023 — Present",
+    },
+    label: {
+      ru: "изменения в команде",
+      en: "team change",
     },
     title: {
       ru: "Провела команду через новые инструменты",
@@ -139,8 +181,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "smena-repositioning",
     source: {
-      ru: "Станция Смена · продуктовая стратегия",
-      en: "Station Smena · product strategy",
+      ru: "B2C Менеджер продукта @ Станция Смена",
+      en: "B2C Product Manager @ Station Smena",
+    },
+    period: {
+      ru: "ноябрь 2024 — март 2026",
+      en: "November 2024 — March 2026",
+    },
+    label: {
+      ru: "продуктовая стратегия",
+      en: "product strategy",
     },
     title: {
       ru: "Нашла новую модель и позиционирование продукта",
@@ -160,8 +210,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "smena-sellout",
     source: {
-      ru: "Станция Смена · рост продукта",
-      en: "Station Smena · product growth",
+      ru: "B2C Менеджер продукта @ Станция Смена",
+      en: "B2C Product Manager @ Station Smena",
+    },
+    period: {
+      ru: "ноябрь 2024 — март 2026",
+      en: "November 2024 — March 2026",
+    },
+    label: {
+      ru: "рост продукта",
+      en: "product growth",
     },
     title: {
       ru: "Распродала линейку поездок раньше плана",
@@ -181,8 +239,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "archstoyanie-partners",
     source: {
-      ru: "Станция Смена · спецпроект и партнёрства",
-      en: "Station Smena · special project and partnerships",
+      ru: "B2C Менеджер продукта @ Станция Смена",
+      en: "B2C Product Manager @ Station Smena",
+    },
+    period: {
+      ru: "ноябрь 2024 — март 2026",
+      en: "November 2024 — March 2026",
+    },
+    label: {
+      ru: "спецпроект и партнёрства",
+      en: "special project and partnerships",
     },
     title: {
       ru: "Запустила спецпроект с лидами и партнёрами",
@@ -202,8 +268,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "founder-pnl",
     source: {
-      ru: "Едем дальше · свой проект",
-      en: "Edem Dalshe · own project",
+      ru: "Основательница @ Едем дальше",
+      en: "Founder @ Edem Dalshe",
+    },
+    period: {
+      ru: "2020 — 2024",
+      en: "2020 — 2024",
+    },
+    label: {
+      ru: "свой проект",
+      en: "own project",
     },
     title: {
       ru: "Собрала проект от экономики до операций",
@@ -223,8 +297,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "jtbd-soldout",
     source: {
-      ru: "Едем дальше · исследование продукта",
-      en: "Edem Dalshe · product research",
+      ru: "Основательница @ Едем дальше",
+      en: "Founder @ Edem Dalshe",
+    },
+    period: {
+      ru: "2020 — 2024",
+      en: "2020 — 2024",
+    },
+    label: {
+      ru: "исследование продукта",
+      en: "product research",
     },
     title: {
       ru: "Проверяла продукт через интервью и продажи",
@@ -244,8 +326,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "ai-book",
     source: {
-      ru: "Проект с Аркадием Сандлером · AI-контент",
-      en: "Arkady Sandler project · AI content",
+      ru: "Менеджер проектов @ Аркадий Сандлер",
+      en: "Project Manager @ Arkady Sandler",
+    },
+    period: {
+      ru: "2021 — 2023",
+      en: "2021 — 2023",
+    },
+    label: {
+      ru: "AI-контент",
+      en: "AI content",
     },
     title: {
       ru: "Довела сложный контент до готового продукта",
@@ -265,8 +355,16 @@ export const resultBullets: ResultBullet[] = [
   {
     id: "voice-assistant-research",
     source: {
-      ru: "Проект с Аркадием Сандлером · исследование",
-      en: "Arkady Sandler project · research",
+      ru: "Менеджер проектов @ Аркадий Сандлер",
+      en: "Project Manager @ Arkady Sandler",
+    },
+    period: {
+      ru: "2021 — 2023",
+      en: "2021 — 2023",
+    },
+    label: {
+      ru: "исследование",
+      en: "research",
     },
     title: {
       ru: "Организовала исследование на 1000+ участников",
@@ -277,32 +375,11 @@ export const resultBullets: ResultBullet[] = [
       en: "Organized a three-stage study on voice assistants and turned it into a B2B guide.",
     },
     tags: {
-      q1: ["A", "B"],
+      q1: ["A", "B", "D"],
       q2: ["A", "D"],
-      q3: ["A", "B"],
+      q3: ["A", "B", "D"],
     },
     priority: 68,
-  },
-  {
-    id: "technovation-mentor",
-    source: {
-      ru: "Technovation Girls · менторство",
-      en: "Technovation Girls · mentorship",
-    },
-    title: {
-      ru: "Менторила команду от идеи до питча",
-      en: "Mentored a team from idea to pitch",
-    },
-    description: {
-      ru: "Сопровождала школьниц из Казахстана: помогала превратить социальную проблему в tech-продукт и подготовить финальный питч.",
-      en: "Supported schoolgirls from Kazakhstan as they turned a social problem into a tech product and prepared the final pitch.",
-    },
-    tags: {
-      q1: ["A", "D"],
-      q2: ["B", "D"],
-      q3: ["B", "D"],
-    },
-    priority: 58,
   },
 ];
 
