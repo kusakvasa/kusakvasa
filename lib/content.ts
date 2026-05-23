@@ -20,7 +20,7 @@ export const ui = {
   role: { ru: "Менеджер проектов", en: "Project Manager" },
   photoAlt: { ru: "Портрет Вари Фёдоровой", en: "Portrait of Varya Fedorova" },
   welcomeText: {
-    ru: "Нажмите кнопку — получите резюме, которое отвечает именно на ваши вопросы",
+    ru: "Нажмите кнопку — получите резюме, которое отвечает на ваши запросы",
     en: "Tap the button — get a resume that answers your exact questions",
   },
   cta: { ru: "Найти своё резюме", en: "Find my resume" },
