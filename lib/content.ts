@@ -23,7 +23,7 @@ export const ui = {
     ru: "Нажмите кнопку — получите резюме, которое отвечает на ваши запросы",
     en: "Tap the button — get a resume that answers your exact questions",
   },
-  cta: { ru: "Найти своё резюме", en: "Find my resume" },
+  cta: { ru: "Показывай!", en: "Let's see" },
   skipCta: {
     ru: "Не хочу искать, хочу сразу резюме",
     en: "Skip the search, show the resume",

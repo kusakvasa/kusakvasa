@@ -25,7 +25,15 @@ const weights: Record<QuestionId, number> = {
   q3: 4,
 };
 
-const defaultResultIds = [
+const noSignalResultIds = [
+  "practicum-dashboards",
+  "smena-repositioning",
+  "practicum-change-team",
+  "smena-sellout",
+  "practicum-segmentation-audit",
+];
+
+const fallbackResultIds = [
   "practicum-dashboards",
   "smena-repositioning",
   "smena-sellout",
@@ -357,7 +365,7 @@ export function selectResultBullets(
   const hasSignal = Object.values(selected).some((answers) => answers.length > 0);
 
   if (!hasSignal) {
-    return defaultResultIds
+    return noSignalResultIds
       .map((id) => resultBullets.find((bullet) => bullet.id === id))
       .filter((bullet): bullet is ResultBullet => Boolean(bullet));
   }
@@ -371,7 +379,7 @@ export function selectResultBullets(
     .sort((a, b) => b.score - a.score || b.bullet.priority - a.bullet.priority)
     .map(({ bullet }) => bullet);
 
-  const fallback = defaultResultIds
+  const fallback = fallbackResultIds
     .map((id) => resultBullets.find((bullet) => bullet.id === id))
     .filter((bullet): bullet is ResultBullet => Boolean(bullet));
 
