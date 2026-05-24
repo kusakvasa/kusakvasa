@@ -94,17 +94,17 @@ export const questions: Question[] = [
         icon: "IconRefresh",
         title: { ru: "Повысить эффективность", en: "Improve efficiency" },
         hint: {
-          ru: "сократить ручной труд, улучшить метрики",
+          ru: "сократить ручной труд, опрозрачить метрики",
           en: "reduce manual work, improve metrics",
         },
       },
       {
         key: "D",
         icon: "IconUsers",
-        title: { ru: "Собрать людей вокруг задачи", en: "Align people around the work" },
+        title: { ru: "Наладить взаимодействие", en: "Set up collaboration" },
         hint: {
-          ru: "стейкхолдеры, партнёры, команда",
-          en: "stakeholders, partners, team",
+          ru: "согласовать роли, ритм и ожидания",
+          en: "align roles, cadence, and expectations",
         },
       },
       {
@@ -118,7 +118,7 @@ export const questions: Question[] = [
   {
     id: "q2",
     title: {
-      ru: "Где сейчас главное трение?",
+      ru: "Где сейчас главная проблема?",
       en: "Where is the main friction right now?",
     },
     options: [
@@ -175,8 +175,8 @@ export const questions: Question[] = [
   {
     id: "q3",
     title: {
-      ru: "Как выглядит успех?",
-      en: "What does success look like?",
+      ru: "Какой результат нужен?",
+      en: "What result do you need?",
     },
     options: [
       {
@@ -213,8 +213,8 @@ export const questions: Question[] = [
         key: "D",
         icon: "IconUsers",
         title: {
-          ru: "Команда или партнёры работают устойчивее",
-          en: "Team or partners work more steadily",
+          ru: "Команде проще работать",
+          en: "The team can work more smoothly",
         },
         hint: {
           ru: "меньше блокеров, лучше онбординг и ритм",
