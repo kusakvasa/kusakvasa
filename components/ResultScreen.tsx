@@ -4,6 +4,9 @@ import { IconDownload, IconBrandTelegram, IconArrowLeft } from "@tabler/icons-re
 import Image from "next/image";
 import { ui, OptionKey, TELEGRAM_URL } from "@/lib/content";
 import {
+  alsoExperienceCards,
+  classifyResumeVariant,
+  isAllNone,
   selectPdfPath,
   selectResultBullets,
   type ResultBullet,
@@ -50,9 +53,13 @@ function groupByExperience(bullets: ResultBullet[]): ExperienceGroup[] {
 
 export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) {
   const { lang } = useLang();
-  const bullets = selectResultBullets(q1, q2, q3);
+  const allNone = isAllNone(q1, q2, q3);
+  const bullets = allNone ? [] : selectResultBullets(q1, q2, q3);
   const groups = groupByExperience(bullets);
-  const pdfPath = selectPdfPath();
+  const variant = classifyResumeVariant(q1, q2, q3);
+  const pdfPath = selectPdfPath(lang, variant);
+  const downloadName =
+    lang === "en" ? "Varvara_Fedorova_CV.pdf" : "Варвара_Фёдорова_резюме.pdf";
 
   return (
     <div className="flex flex-col gap-6 py-4">
@@ -80,29 +87,53 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
-        {groups.map((group) => (
-          <section key={group.key} className="flex flex-col gap-2.5">
+      {allNone ? (
+        <div className="flex flex-col gap-5">
+          <p className="text-sm leading-relaxed text-foreground/90">
+            {ui.noneSummary[lang]}
+          </p>
+          <section className="flex flex-col gap-2.5">
             <header className="result-experience-heading">
-              <h2>{group.source[lang]}</h2>
-              <p>{group.period[lang]}</p>
+              <h2>{ui.alsoExperience[lang]}</h2>
             </header>
             <div className="flex flex-col gap-2.5">
-              {group.bullets.map((bullet) => (
-                <article key={bullet.id} className="result-chip">
-                  <h3>{bullet.title[lang]}</h3>
-                  <p>{bullet.description[lang]}</p>
+              {alsoExperienceCards.map((card) => (
+                <article key={card.id} className="result-chip">
+                  <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+                    {card.period[lang]}
+                  </div>
+                  <h3>{card.title[lang]}</h3>
+                  <p>{card.description[lang]}</p>
                 </article>
               ))}
             </div>
           </section>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-5">
+          {groups.map((group) => (
+            <section key={group.key} className="flex flex-col gap-2.5">
+              <header className="result-experience-heading">
+                <h2>{group.source[lang]}</h2>
+                <p>{group.period[lang]}</p>
+              </header>
+              <div className="flex flex-col gap-2.5">
+                {group.bullets.map((bullet) => (
+                  <article key={bullet.id} className="result-chip">
+                    <h3>{bullet.title[lang]}</h3>
+                    <p>{bullet.description[lang]}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      )}
 
       <div className="action-stack flex flex-col gap-2 pt-2">
         <a
           href={pdfPath}
-          download="Варвара_Федорова_резюме.pdf"
+          download={downloadName}
           className={cn(
             buttonVariants({ size: "lg" }),
             "game-cta action-button gap-2 font-extrabold text-black"

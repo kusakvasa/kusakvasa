@@ -55,6 +55,14 @@ export const ui = {
     ru: "ноябрь 2024 - март 2026",
     en: "November 2024 - March 2026",
   },
+  noneSummary: {
+    ru: "Менеджер проектов и продуктов. 5 лет: аналитика, автоматизация, запуск продуктов и спецпроектов.",
+    en: "Project and product manager. 5 years across analytics, automation, product launches, and special projects.",
+  },
+  alsoExperience: {
+    ru: "Было и другое",
+    en: "Also there was",
+  },
   welcomeTags: [
     { ru: "data-driven (how else)", en: "data-driven (how else)" },
     { ru: "оптимизация процессов", en: "process optimization" },

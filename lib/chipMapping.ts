@@ -1,4 +1,4 @@
-import type { OptionKey } from "./content";
+import type { Lang, OptionKey } from "./content";
 
 type QuestionId = "q1" | "q2" | "q3";
 type AnswerKey = Exclude<OptionKey, "none">;
@@ -143,8 +143,8 @@ export const resultBullets: ResultBullet[] = [
       en: "process scaling",
     },
     title: {
-      ru: "Унифицировала данные по десяткам профессий",
-      en: "Unified data across dozens of professions",
+      ru: "Унифицировала данные по 90+ курсам",
+      en: "Unified data across 90+ courses",
     },
     description: {
       ru: "Собрала единые правила подсчёта метрик, опросники качества и отчётность по трудоустройству, чтобы убрать лишние касания и сравнивать программы честно.",
@@ -277,7 +277,7 @@ export const resultBullets: ResultBullet[] = [
     id: "founder-pnl",
     source: {
       ru: "Основательница @ Едем дальше",
-      en: "Founder @ Edem Dalshe",
+      en: "Founder @ Moving On",
     },
     period: {
       ru: "2020 — 2024",
@@ -288,12 +288,12 @@ export const resultBullets: ResultBullet[] = [
       en: "own project",
     },
     title: {
-      ru: "Собрала проект от экономики до операций",
-      en: "Ran a project from economics to operations",
+      ru: "Создала тревел-проект",
+      en: "Built a travel project",
     },
     description: {
-      ru: "Как основательница тревел-коммьюнити считала экономику проекта, запускала маркетинг, собирала продуктовую линейку и вела сами заезды.",
-      en: "As the founder of a travel community, owned P&L, marketing, product lineup, and trip operations.",
+      ru: "Как основательница считала экономику проекта, запускала маркетинг, собирала продуктовую линейку и вела сами заезды.",
+      en: "As the founder, owned P&L, marketing, product lineup, and trip operations.",
     },
     tags: {
       q1: ["A"],
@@ -306,7 +306,7 @@ export const resultBullets: ResultBullet[] = [
     id: "jtbd-soldout",
     source: {
       ru: "Основательница @ Едем дальше",
-      en: "Founder @ Edem Dalshe",
+      en: "Founder @ Moving On",
     },
     period: {
       ru: "2020 — 2024",
@@ -332,6 +332,65 @@ export const resultBullets: ResultBullet[] = [
     priority: 35,
   },
 ];
+
+export interface AlsoExperienceCard {
+  id: string;
+  period: LocalizedText;
+  title: LocalizedText;
+  description: LocalizedText;
+}
+
+export const alsoExperienceCards: AlsoExperienceCard[] = [
+  {
+    id: "archstoyanie",
+    period: { ru: "июль 2025", en: "July 2025" },
+    title: {
+      ru: "Сделала аудиоспектакль на Архстоянии",
+      en: "Made an audio performance at Archstoyanie",
+    },
+    description: {
+      ru: "Привела 400+ тёплых лидов в воронку, закрыла финансирование через краудфандинг и 5 корпоративных партнёрств.",
+      en: "Brought 400+ warm leads into the funnel and secured funding through crowdfunding and 5 corporate partnerships.",
+    },
+  },
+  {
+    id: "tolk",
+    period: {
+      ru: "ноябрь 2025 — апрель 2026",
+      en: "November 2025 — April 2026",
+    },
+    title: {
+      ru: "Собрала программу 3-дневного интенсива в ТОЛКе (Т-Банк)",
+      en: "Built the program for a 3-day TOLK intensive (T-Bank)",
+    },
+    description: {
+      ru: "Программный менеджер основной программы крупнейшего ивента по финансовой грамотности в РФ (100k+ участников). 4 индивидуальных формата под медийных спикеров, координация 12 часов прямого эфира.",
+      en: "Program manager of the main program at Russia's largest financial literacy event (100k+ participants). 4 custom formats for media speakers, coordinated 12 hours of live broadcast.",
+    },
+  },
+  {
+    id: "moving-on",
+    period: { ru: "2020 — 2024", en: "2020 — 2024" },
+    title: {
+      ru: "Создала тревел-проект «Едем дальше»",
+      en: "Built a travel project «Moving On»",
+    },
+    description: {
+      ru: "Как основательница считала экономику, запускала маркетинг, собирала продуктовую линейку и вела сами заезды. 16 поездок, прибыль с 3-й, JTBD-интервью.",
+      en: "As the founder, owned P&L, marketing, product lineup, and trip operations. 16 trips, profitable from the 3rd, JTBD interviews.",
+    },
+  },
+];
+
+export function isAllNone(
+  q1: OptionKey[],
+  q2: OptionKey[],
+  q3: OptionKey[]
+): boolean {
+  const isNone = (arr: OptionKey[]) =>
+    arr.length === 1 && arr[0] === "none";
+  return isNone(q1) && isNone(q2) && isNone(q3);
+}
 
 function activeAnswers(selected: OptionKey[]): AnswerKey[] {
   return selected.filter((key): key is AnswerKey => key !== "none");
@@ -367,7 +426,8 @@ export function selectResultBullets(
   if (!hasSignal) {
     return noSignalResultIds
       .map((id) => resultBullets.find((bullet) => bullet.id === id))
-      .filter((bullet): bullet is ResultBullet => Boolean(bullet));
+      .filter((bullet): bullet is ResultBullet => Boolean(bullet))
+      .slice(0, limit);
   }
 
   const ranked = resultBullets
@@ -394,6 +454,68 @@ export function selectResultBullets(
   return merged.slice(0, limit);
 }
 
-export function selectPdfPath(): string {
-  return "/resumes/resume_default.pdf";
+export type ResumeVariant = "basic" | "operational" | "launch";
+
+const launchSignals: Record<QuestionId, AnswerKey[]> = {
+  q1: ["A"],
+  q2: ["B"],
+  q3: ["B"],
+};
+
+const operationalSignals: Record<QuestionId, AnswerKey[]> = {
+  q1: ["B", "C", "D"],
+  q2: ["A", "C", "D"],
+  q3: ["A", "C", "D"],
+};
+
+export function classifyResumeVariant(
+  q1: OptionKey[],
+  q2: OptionKey[],
+  q3: OptionKey[]
+): ResumeVariant {
+  const selected: Record<QuestionId, AnswerKey[]> = {
+    q1: activeAnswers(q1),
+    q2: activeAnswers(q2),
+    q3: activeAnswers(q3),
+  };
+  const hasSignal = Object.values(selected).some((answers) => answers.length > 0);
+  if (!hasSignal) return "basic";
+
+  let launchScore = 0;
+  let opsScore = 0;
+  (Object.keys(selected) as QuestionId[]).forEach((qid) => {
+    for (const ans of selected[qid]) {
+      if (launchSignals[qid].includes(ans)) launchScore += 1;
+      if (operationalSignals[qid].includes(ans)) opsScore += 1;
+    }
+  });
+
+  if (launchScore === 0 && opsScore === 0) return "basic";
+  // Launch has 3 possible signals vs 9 for ops; weight launch hits 2x to balance.
+  const launchWeighted = launchScore * 2;
+  if (launchWeighted > opsScore) return "launch";
+  if (opsScore > launchWeighted) return "operational";
+  return "basic";
+}
+
+const pdfPaths: Record<ResumeVariant, Record<Lang, string>> = {
+  basic: {
+    ru: "/resumes/resume_basic_ru.pdf",
+    en: "/resumes/resume_basic_en.pdf",
+  },
+  operational: {
+    ru: "/resumes/resume_operational_ru.pdf",
+    en: "/resumes/resume_operational_en.pdf",
+  },
+  launch: {
+    ru: "/resumes/resume_launch_ru.pdf",
+    en: "/resumes/resume_launch_en.pdf",
+  },
+};
+
+export function selectPdfPath(
+  lang: Lang,
+  variant: ResumeVariant = "basic"
+): string {
+  return pdfPaths[variant][lang];
 }
