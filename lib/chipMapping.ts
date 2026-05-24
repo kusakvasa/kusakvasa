@@ -259,11 +259,11 @@ export const resultBullets: ResultBullet[] = [
       en: "Produced an audio experience for Archstoyanie, brought in 400+ warm leads, and secured funding through crowdfunding and 5 corporate partnerships.",
     },
     tags: {
-      q1: ["A", "D"],
-      q2: ["B", "D"],
-      q3: ["B", "C", "D"],
+      q1: ["A"],
+      q2: [],
+      q3: ["B"],
     },
-    priority: 98,
+    priority: 70,
   },
   {
     id: "founder-pnl",
