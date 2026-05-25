@@ -64,7 +64,7 @@ export const ui = {
     en: "Also there was",
   },
   welcomeTags: [
-    { ru: "data-driven (how else)", en: "data-driven (how else)" },
+    { ru: "data-driven (how else)", en: "data-driven (how else)" },
     { ru: "оптимизация процессов", en: "process optimization" },
     { ru: "развитие продукта", en: "product growth" },
     { ru: "нишевый юмор", en: "niche humor" },
