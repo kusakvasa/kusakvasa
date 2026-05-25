@@ -304,12 +304,12 @@ export const resultBullets: ResultBullet[] = [
       en: "own project",
     },
     title: {
-      ru: "Создала тревел-проект с прибылью с 3-й поездки",
-      en: "Built a travel project, profitable from trip 3",
+      ru: "Создала тревел-проект",
+      en: "Built a travel project",
     },
     description: {
-      ru: "Как основательница считала экономику проекта, запускала маркетинг, собирала продуктовую линейку и вела сами заезды.",
-      en: "As the founder, owned P&L, marketing, product lineup, and trip operations.",
+      ru: "Считала экономику, запускала маркетинг, собирала продуктовую линейку и вела сами заезды. JTBD-интервью находили правильную длительность и локации поездок.",
+      en: "Owned P&L, marketing, product lineup, and trip operations. JTBD interviews shaped the right trip length and locations.",
     },
     tags: {
       q1: ["A"],
