@@ -60,8 +60,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Cut 250+ manual hours a month with 4 dashboards",
     },
     description: {
-      ru: "Убрала Google-таблицы из ежедневной рутины, собрала 4 дашборда с аналитиками и разработчиками и освободила 250+ часов кураторов в месяц.",
-      en: "Replaced daily Google Sheets work with 4 dashboards built with analysts and developers, freeing 250+ curator hours per month.",
+      ru: "Заменила Google-таблицы; собирала вместе с аналитиками и разработчиками.",
+      en: "Replaced Google Sheets; built it together with analysts and developers.",
     },
     tags: {
       q1: ["B", "C"],
@@ -89,8 +89,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Tied Career Center metrics to EBITDA",
     },
     description: {
-      ru: "Разложила работу Карьерного центра на понятные метрики, чтобы команда видела связь между продуктом, воронкой и трудоустройством выпускников.",
-      en: "Mapped Career Center work into clear metrics so the team could connect product work, funnel movement, and graduate employment outcomes.",
+      ru: "Связь между продуктом, воронкой и трудоустройством стала видна всей команде.",
+      en: "The link between product work, funnel, and graduate employment became visible to the whole team.",
     },
     tags: {
       q1: ["B", "C"],
@@ -118,8 +118,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Used regression to retire a broken segmentation",
     },
     description: {
-      ru: "Через регрессионную модель показала, что старая сегментация не помогает принимать решения, и перенаправила аналитический ресурс на более полезные задачи.",
-      en: "Used a regression model to show that the old segmentation did not support decisions, then redirected analytics time to higher-value work.",
+      ru: "Перенаправила аналитический ресурс с поддержки нерабочей модели на более полезные задачи.",
+      en: "Redirected analytics time from supporting a broken model to higher-value work.",
     },
     tags: {
       q1: ["B", "C"],
@@ -147,8 +147,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Made data collection transparent across 90+ courses",
     },
     description: {
-      ru: "Собрала единые правила подсчёта метрик, опросники качества и отчётность по трудоустройству, чтобы убрать лишние касания и сравнивать программы честно.",
-      en: "Created shared metric rules, LX surveys, and employment reporting to remove extra touchpoints and compare programs cleanly.",
+      ru: "Единые правила подсчёта, LX-опросники и отчётность по трудоустройству — программы сравниваются честно, без лишних касаний студентов.",
+      en: "Shared metric rules, LX surveys, and employment reporting — programs compare cleanly, no extra student touchpoints.",
     },
     tags: {
       q1: ["B", "C"],
@@ -176,8 +176,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Moved a 30-person team onto new processes",
     },
     description: {
-      ru: "Переводила команду из 30 человек на новые аналитические процессы, чтобы изменение прижилось в работе, а не осталось в презентации.",
-      en: "Moved a 30-person team into new analytics workflows so the change became part of everyday work instead of staying in a deck.",
+      ru: "Изменение прижилось в ежедневной работе, а не осталось в презентации.",
+      en: "The change stuck in daily work instead of staying in a deck.",
     },
     tags: {
       q1: ["B", "D"],
@@ -205,8 +205,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Relaunched the product lineup on a new segmentation",
     },
     description: {
-      ru: "Провела качественное и количественное исследование аудитории, собрала новую сегментацию и помогла перезапустить продуктовую линейку.",
-      en: "Ran qualitative and quantitative audience research, built a new segmentation, and helped relaunch the product lineup.",
+      ru: "Основа — качественное и количественное исследование аудитории, которое провела с COO и CEO.",
+      en: "Built on qualitative and quantitative audience research I ran with the COO and CEO.",
     },
     tags: {
       q1: ["A", "B"],
@@ -234,8 +234,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Sold out 100% of the season 3 months ahead of plan",
     },
     description: {
-      ru: "Новая сегментация и продуктовая линейка помогли распродать 100% поездок ближайшего сезона на три месяца раньше обычного.",
-      en: "The new segmentation and product lineup helped sell out 100% of the upcoming season three months earlier than usual.",
+      ru: "Драйверы — новая сегментация и обновлённая линейка поездок.",
+      en: "Drivers — a new segmentation and a refreshed trip lineup.",
     },
     tags: {
       q1: ["A", "C"],
@@ -263,8 +263,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Brought 400+ leads and 5 partners through an Archstoyanie special project",
     },
     description: {
-      ru: "Сделала аудиоспектакль для Архстояния, привела 400+ тёплых лидов и закрыла финансирование через краудфандинг и 5 корпоративных партнёрств.",
-      en: "Produced an audio experience for Archstoyanie, brought in 400+ warm leads, and secured funding through crowdfunding and 5 corporate partnerships.",
+      ru: "Спецпроект — аудиоспектакль; финансирование закрыла краудфандингом без платного медиа.",
+      en: "The special project was an audio performance; funded through crowdfunding with zero paid media.",
     },
     tags: {
       q1: ["A"],
@@ -321,8 +321,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Used JTBD interviews to push trips to sell out in 24h",
     },
     description: {
-      ru: "Интервью с клиентами помогали выбирать длительность и локации поездок; отдельные заезды распродавались за сутки.",
-      en: "JTBD interviews helped choose trip duration and locations; some trips sold out within a day.",
+      ru: "Использовала их, чтобы выбирать длительность и локации поездок под реальные драйверы решений клиентов.",
+      en: "Used them to pick trip duration and locations around real customer decision drivers.",
     },
     tags: {
       q1: ["A"],
@@ -364,8 +364,8 @@ export const alsoExperienceCards: AlsoExperienceCard[] = [
       en: "Built the program for TOLK's 100k+ audience intensive (T-Bank)",
     },
     description: {
-      ru: "Программный менеджер основной программы крупнейшего ивента по финансовой грамотности в РФ (100k+ участников). 4 индивидуальных формата под медийных спикеров, координация 12 часов прямого эфира.",
-      en: "Program manager of the main program at Russia's largest financial literacy event (100k+ participants). 4 custom formats for media speakers, coordinated 12 hours of live broadcast.",
+      ru: "Крупнейший ивент по финансовой грамотности в РФ. 4 индивидуальных формата под медийных спикеров, координация 12 часов прямого эфира.",
+      en: "Russia's largest financial literacy event. 4 custom formats for media speakers, coordinated 12 hours of live broadcast.",
     },
   },
   {
