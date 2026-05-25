@@ -60,8 +60,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Cut 250+ manual hours a month with 4 dashboards",
     },
     description: {
-      ru: "Дашборды — для управления воронкой в реальном времени. Сэкономленные часы позволили масштабировать департамент без найма дополнительных кураторов.",
-      en: "Dashboards for real-time funnel management. The saved hours let the department scale without hiring extra curators.",
+      ru: "Дашборды — для управления воронкой в реальном времени. Сэкономленные часы позволили масштабировать департамент без расширения команды.",
+      en: "Dashboards for real-time funnel management. The saved hours let the department scale without growing the team.",
     },
     tags: {
       q1: ["B", "C"],
