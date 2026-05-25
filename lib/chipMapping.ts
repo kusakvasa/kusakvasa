@@ -85,8 +85,8 @@ export const resultBullets: ResultBullet[] = [
       en: "metrics management",
     },
     title: {
-      ru: "Связала метрики Карьерного центра с EBITDA",
-      en: "Tied Career Center metrics to EBITDA",
+      ru: "Собрала дерево метрик под бизнес-цели",
+      en: "Built a metric tree tied to business goals",
     },
     description: {
       ru: "Связь между продуктом, воронкой и трудоустройством стала видна всей команде.",
@@ -230,12 +230,12 @@ export const resultBullets: ResultBullet[] = [
       en: "product growth",
     },
     title: {
-      ru: "Распродала 100% сезона на 3 месяца раньше плана",
-      en: "Sold out 100% of the season 3 months ahead of plan",
+      ru: "Распродала линейку поездок раньше плана",
+      en: "Got the trip lineup to sell out ahead of plan",
     },
     description: {
-      ru: "Драйверы — новая сегментация и обновлённая линейка поездок.",
-      en: "Drivers — a new segmentation and a refreshed trip lineup.",
+      ru: "100% поездок ближайшего сезона ушли на 3 месяца раньше обычного. Драйверы — новая сегментация и обновлённая линейка.",
+      en: "100% of the upcoming season sold out 3 months earlier than usual. Drivers — new segmentation and a refreshed lineup.",
     },
     tags: {
       q1: ["A", "C"],
@@ -259,12 +259,12 @@ export const resultBullets: ResultBullet[] = [
       en: "special project and partnerships",
     },
     title: {
-      ru: "Привела 400+ лидов и 5 партнёров через спецпроект на Архстоянии",
-      en: "Brought 400+ leads and 5 partners through an Archstoyanie special project",
+      ru: "Сделала аудиоспектакль на Архстоянии",
+      en: "Made an audio performance at Archstoyanie",
     },
     description: {
-      ru: "Спецпроект — аудиоспектакль; финансирование закрыла краудфандингом без платного медиа.",
-      en: "The special project was an audio performance; funded through crowdfunding with zero paid media.",
+      ru: "Привела 400+ тёплых лидов в воронку; финансирование закрыла краудфандингом и 5 корпоративных партнёрств без платного медиа.",
+      en: "Brought 400+ warm leads into the funnel; funded through crowdfunding and 5 corporate partnerships with zero paid media.",
     },
     tags: {
       q1: ["A"],
