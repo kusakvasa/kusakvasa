@@ -127,7 +127,7 @@ export const questions: Question[] = [
     id: "q2",
     title: {
       ru: "Где сейчас главная проблема?",
-      en: "Where is the main friction right now?",
+      en: "Where is the main challenge right now?",
     },
     options: [
       {
