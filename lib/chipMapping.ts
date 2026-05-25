@@ -176,8 +176,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Moved a 30-person team onto new processes",
     },
     description: {
-      ru: "Обучала и онбордила сама. В итоге команда знает, где искать ошибки и как работать с данными — знания не зависят от меня.",
-      en: "Onboarded and trained the team myself. They now know where to look for errors and how to work with the data — knowledge doesn't sit only with me.",
+      ru: "Обучала и онбордила сама. В итоге команда знает, где искать ошибки и как работать с данными, знания не зависят от меня.",
+      en: "Onboarded and trained the team myself. They now know where to look for errors and how to work with the data, knowledge doesn't sit only with me.",
     },
     tags: {
       q1: ["B", "D"],
