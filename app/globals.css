@@ -361,7 +361,7 @@
   .welcome-tag-board {
     position: relative;
     display: grid;
-    width: 100%;
+    width: min(100%, 360px);
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 10px 10px;
     justify-items: center;
@@ -372,20 +372,27 @@
     display: flex;
     min-height: 40px;
     width: 100%;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     border: 0;
     border-radius: 999px;
     color: #000000;
-    padding: 8px 16px;
-    font-size: clamp(0.78rem, 1.8vw, 0.95rem);
+    padding: 8px 12px;
+    font-size: clamp(0.78rem, 2.95vw, 0.98rem);
     font-weight: 650;
     letter-spacing: 0;
-    line-height: 1.2;
+    line-height: 1.05;
     text-align: center;
+    text-overflow: clip;
     transform-origin: center;
-    white-space: normal;
-    word-break: break-word;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 481px) {
+    .welcome-tag {
+      font-size: 0.72rem;
+    }
   }
 
   .welcome-tag--orange {
