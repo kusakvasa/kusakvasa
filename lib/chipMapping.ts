@@ -64,7 +64,7 @@ export const resultBullets: ResultBullet[] = [
       en: "Cut 250+ manual hours a month with 4 dashboards",
     },
     description: {
-      ru: "Дашборды — для управления воронкой в реальном времени. Команда распределяет ресурсы эффективнее без дополнительного найма.",
+      ru: "Дашборды помогают управлять воронкой в реальном времени. Команда распределяет ресурсы эффективнее без дополнительного найма.",
       en: "Dashboards for real-time funnel management. The team allocates resources more efficiently without extra hires.",
     },
     tags: {
@@ -122,7 +122,7 @@ export const resultBullets: ResultBullet[] = [
       en: "Used regression to retire a broken segmentation",
     },
     description: {
-      ru: "Раньше команда на её основе пыталась принимать продуктовые решения — теперь аналитический ресурс ушёл на более ценные задачи.",
+      ru: "Раньше команда на её основе пыталась принимать продуктовые решения. Теперь аналитический ресурс ушёл на более ценные задачи.",
       en: "It used to drive product decisions; now the analytics time goes into higher-value work.",
     },
     tags: {
@@ -151,8 +151,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Made data collection transparent across 90+ courses",
     },
     description: {
-      ru: "Единые правила подсчёта, LX-опросники и отчётность по трудоустройству — программы сравниваются честно, без лишних касаний студентов.",
-      en: "Shared metric rules, LX surveys, and employment reporting — programs compare cleanly, no extra student touchpoints.",
+      ru: "Единые правила подсчёта, LX-опросники и отчётность по трудоустройству помогают честно сравнивать программы без лишних касаний студентов.",
+      en: "Shared metric rules, LX surveys, and employment reporting help compare programs cleanly with no extra student touchpoints.",
     },
     tags: {
       q1: ["B", "C"],
@@ -244,8 +244,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Got the trip lineup to sell out ahead of plan",
     },
     description: {
-      ru: "100% поездок ближайшего сезона ушли на 3 месяца раньше обычного. Драйверы — новая сегментация и обновлённая линейка.",
-      en: "100% of the upcoming season sold out 3 months earlier than usual. Drivers — new segmentation and a refreshed lineup.",
+      ru: "100% поездок ближайшего сезона ушли на 3 месяца раньше обычного. Сработали новая сегментация и обновлённая линейка.",
+      en: "100% of the upcoming season sold out 3 months earlier than usual. New segmentation and a refreshed lineup drove it.",
     },
     tags: {
       q1: ["A", "C"],
@@ -302,7 +302,7 @@ export const resultBullets: ResultBullet[] = [
       en: "Built a travel project",
     },
     description: {
-      ru: "Считала экономику, запускала маркетинг, собирала продуктовую линейку и вела сами заезды. С помощью JTBD-интервью нашла правильную длительность и ценность поездок — это позволило достигать быстрых солдаутов.",
+      ru: "Считала экономику, запускала маркетинг, собирала продуктовую линейку и вела сами заезды. С помощью JTBD-интервью нашла правильную длительность и ценность поездок, что помогало быстро распродавать заезды.",
       en: "Owned P&L, marketing, product lineup, and trip operations. JTBD interviews helped me find the right trip length and value, which drove fast sellouts.",
     },
     tags: {

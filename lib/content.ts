@@ -60,8 +60,8 @@ export const ui = {
     en: "Project and product manager. 5 years across analytics, automation, product launches, and special projects.",
   },
   alsoExperience: {
-    ru: "Было и другое",
-    en: "Also there was",
+    ru: "Из предыдущих вариантов вам ничего не подошло, но у меня есть ещё:",
+    en: "None of the previous options fit, but I also have:",
   },
   welcomeTags: [
     { ru: "data-driven (how else)", en: "data-driven (how else)" },
