@@ -380,7 +380,7 @@
     color: #000000;
     padding: 8px 12px;
     font-size: clamp(0.78rem, 2.95vw, 0.98rem);
-    font-weight: 650;
+    font-weight: 800;
     letter-spacing: 0;
     line-height: 1.05;
     text-align: center;
@@ -396,7 +396,7 @@
   }
 
   .welcome-tag--orange {
-    background: var(--pop-orange);
+    background: #ff5a1f;
     transform: rotate(-2.5deg);
   }
 
@@ -407,7 +407,7 @@
 
   .welcome-tag--blue {
     background: var(--pop-blue);
-    color: var(--pop-pink);
+    color: #ffffff;
     transform: rotate(-1.6deg);
   }
 

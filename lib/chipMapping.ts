@@ -35,20 +35,14 @@ const weights: Record<QuestionId, number> = {
   q3: 4,
 };
 
-const noSignalResultIds = [
-  "practicum-dashboards",
-  "smena-repositioning",
-  "practicum-change-team",
-  "smena-sellout",
-  "practicum-segmentation-audit",
-];
-
-const fallbackResultIds = [
+const basicResumeResultIds = [
   "practicum-dashboards",
   "smena-repositioning",
   "smena-sellout",
   "archstoyanie-partners",
 ];
+
+const fallbackResultIds = basicResumeResultIds;
 
 export const resultBullets: ResultBullet[] = [
   {
@@ -440,7 +434,7 @@ export function selectResultBullets(
   const hasSignal = Object.values(selected).some((answers) => answers.length > 0);
 
   if (!hasSignal) {
-    return noSignalResultIds
+    return basicResumeResultIds
       .map((id) => resultBullets.find((bullet) => bullet.id === id))
       .filter((bullet): bullet is ResultBullet => Boolean(bullet))
       .slice(0, limit);
