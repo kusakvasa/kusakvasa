@@ -60,8 +60,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Cut 250+ manual hours a month with 4 dashboards",
     },
     description: {
-      ru: "Заменила Google-таблицы; собирала вместе с аналитиками и разработчиками.",
-      en: "Replaced Google Sheets; built it together with analysts and developers.",
+      ru: "Дашборды — для управления воронкой в реальном времени. Сэкономленные часы позволили масштабировать департамент без найма дополнительных кураторов.",
+      en: "Dashboards for real-time funnel management. The saved hours let the department scale without hiring extra curators.",
     },
     tags: {
       q1: ["B", "C"],
@@ -89,8 +89,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Built a metric tree tied to business goals",
     },
     description: {
-      ru: "Связь между продуктом, воронкой и трудоустройством стала видна всей команде.",
-      en: "The link between product work, funnel, and graduate employment became visible to the whole team.",
+      ru: "В дашбордах остались только метрики, которые напрямую или косвенно влияют на EBITDA. Лишнее не считаем.",
+      en: "Only metrics that directly or indirectly impact EBITDA stayed on the dashboards. The rest is no longer tracked.",
     },
     tags: {
       q1: ["B", "C"],
@@ -118,8 +118,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Used regression to retire a broken segmentation",
     },
     description: {
-      ru: "Перенаправила аналитический ресурс с поддержки нерабочей модели на более полезные задачи.",
-      en: "Redirected analytics time from supporting a broken model to higher-value work.",
+      ru: "Раньше команда на её основе пыталась принимать продуктовые решения — теперь аналитический ресурс ушёл на более ценные задачи.",
+      en: "It used to drive product decisions; now the analytics time goes into higher-value work.",
     },
     tags: {
       q1: ["B", "C"],
@@ -176,8 +176,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Moved a 30-person team onto new processes",
     },
     description: {
-      ru: "Изменение прижилось в ежедневной работе, а не осталось в презентации.",
-      en: "The change stuck in daily work instead of staying in a deck.",
+      ru: "Обучала и онбордила сама. В итоге команда знает, где искать ошибки и как работать с данными — знания не зависят от меня.",
+      en: "Onboarded and trained the team myself. They now know where to look for errors and how to work with the data — knowledge doesn't sit only with me.",
     },
     tags: {
       q1: ["B", "D"],
@@ -205,8 +205,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Relaunched the product lineup on a new segmentation",
     },
     description: {
-      ru: "Основа — качественное и количественное исследование аудитории, которое провела с COO и CEO.",
-      en: "Built on qualitative and quantitative audience research I ran with the COO and CEO.",
+      ru: "Провела комплексное количественное и качественное исследование аудитории. Теперь видно, как новые продукты влияют на маркетинговые и продуктовые воронки.",
+      en: "Ran comprehensive quantitative and qualitative audience research. We now see how new products move marketing and product funnels.",
     },
     tags: {
       q1: ["A", "B"],
