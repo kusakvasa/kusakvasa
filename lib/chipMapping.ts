@@ -56,8 +56,8 @@ export const resultBullets: ResultBullet[] = [
       en: "analytics and processes",
     },
     title: {
-      ru: "Перевела ручной сбор данных в дашборды",
-      en: "Moved manual data collection into dashboards",
+      ru: "Сняла 250+ ручных часов в месяц через 4 дашборда",
+      en: "Cut 250+ manual hours a month with 4 dashboards",
     },
     description: {
       ru: "Убрала Google-таблицы из ежедневной рутины, собрала 4 дашборда с аналитиками и разработчиками и освободила 250+ часов кураторов в месяц.",
@@ -85,8 +85,8 @@ export const resultBullets: ResultBullet[] = [
       en: "metrics management",
     },
     title: {
-      ru: "Собрала дерево метрик под бизнес-цели",
-      en: "Built a metric tree tied to business goals",
+      ru: "Связала метрики Карьерного центра с EBITDA",
+      en: "Tied Career Center metrics to EBITDA",
     },
     description: {
       ru: "Разложила работу Карьерного центра на понятные метрики, чтобы команда видела связь между продуктом, воронкой и трудоустройством выпускников.",
@@ -114,8 +114,8 @@ export const resultBullets: ResultBullet[] = [
       en: "product analytics",
     },
     title: {
-      ru: "Проверила сегментацию цифрами",
-      en: "Validated segmentation with data",
+      ru: "Регрессией доказала, что старая сегментация не работает",
+      en: "Used regression to retire a broken segmentation",
     },
     description: {
       ru: "Через регрессионную модель показала, что старая сегментация не помогает принимать решения, и перенаправила аналитический ресурс на более полезные задачи.",
@@ -143,8 +143,8 @@ export const resultBullets: ResultBullet[] = [
       en: "process scaling",
     },
     title: {
-      ru: "Унифицировала данные по 90+ курсам",
-      en: "Unified data across 90+ courses",
+      ru: "Опрозрачила сбор данных на 90+ курсах",
+      en: "Made data collection transparent across 90+ courses",
     },
     description: {
       ru: "Собрала единые правила подсчёта метрик, опросники качества и отчётность по трудоустройству, чтобы убрать лишние касания и сравнивать программы честно.",
@@ -172,8 +172,8 @@ export const resultBullets: ResultBullet[] = [
       en: "team change",
     },
     title: {
-      ru: "Провела команду через новые инструменты",
-      en: "Helped a team adopt new tools",
+      ru: "Перевела команду из 30 человек на новые процессы",
+      en: "Moved a 30-person team onto new processes",
     },
     description: {
       ru: "Переводила команду из 30 человек на новые аналитические процессы, чтобы изменение прижилось в работе, а не осталось в презентации.",
@@ -201,8 +201,8 @@ export const resultBullets: ResultBullet[] = [
       en: "product strategy",
     },
     title: {
-      ru: "Нашла новую модель и позиционирование продукта",
-      en: "Found a new product model and positioning",
+      ru: "Перезапустила продуктовую линейку на новой сегментации",
+      en: "Relaunched the product lineup on a new segmentation",
     },
     description: {
       ru: "Провела качественное и количественное исследование аудитории, собрала новую сегментацию и помогла перезапустить продуктовую линейку.",
@@ -230,8 +230,8 @@ export const resultBullets: ResultBullet[] = [
       en: "product growth",
     },
     title: {
-      ru: "Распродала линейку поездок раньше плана",
-      en: "Got the trip lineup to sell out ahead of plan",
+      ru: "Распродала 100% сезона на 3 месяца раньше плана",
+      en: "Sold out 100% of the season 3 months ahead of plan",
     },
     description: {
       ru: "Новая сегментация и продуктовая линейка помогли распродать 100% поездок ближайшего сезона на три месяца раньше обычного.",
@@ -259,8 +259,8 @@ export const resultBullets: ResultBullet[] = [
       en: "special project and partnerships",
     },
     title: {
-      ru: "Запустила спецпроект с лидами и партнёрами",
-      en: "Launched a special project with leads and partners",
+      ru: "Привела 400+ лидов и 5 партнёров через спецпроект на Архстоянии",
+      en: "Brought 400+ leads and 5 partners through an Archstoyanie special project",
     },
     description: {
       ru: "Сделала аудиоспектакль для Архстояния, привела 400+ тёплых лидов и закрыла финансирование через краудфандинг и 5 корпоративных партнёрств.",
@@ -288,8 +288,8 @@ export const resultBullets: ResultBullet[] = [
       en: "own project",
     },
     title: {
-      ru: "Создала тревел-проект",
-      en: "Built a travel project",
+      ru: "Создала тревел-проект с прибылью с 3-й поездки",
+      en: "Built a travel project, profitable from trip 3",
     },
     description: {
       ru: "Как основательница считала экономику проекта, запускала маркетинг, собирала продуктовую линейку и вела сами заезды.",
@@ -317,8 +317,8 @@ export const resultBullets: ResultBullet[] = [
       en: "product research",
     },
     title: {
-      ru: "Проверяла продукт через интервью и продажи",
-      en: "Validated product decisions through interviews and sales",
+      ru: "Через JTBD-интервью довела заезды до солдаута за сутки",
+      en: "Used JTBD interviews to push trips to sell out in 24h",
     },
     description: {
       ru: "Интервью с клиентами помогали выбирать длительность и локации поездок; отдельные заезды распродавались за сутки.",
@@ -360,8 +360,8 @@ export const alsoExperienceCards: AlsoExperienceCard[] = [
       en: "November 2025 — April 2026",
     },
     title: {
-      ru: "Собрала программу 3-дневного интенсива в ТОЛКе (Т-Банк)",
-      en: "Built the program for a 3-day TOLK intensive (T-Bank)",
+      ru: "Собрала программу интенсива для 100k+ зрителей ТОЛКа (Т-Банк)",
+      en: "Built the program for TOLK's 100k+ audience intensive (T-Bank)",
     },
     description: {
       ru: "Программный менеджер основной программы крупнейшего ивента по финансовой грамотности в РФ (100k+ участников). 4 индивидуальных формата под медийных спикеров, координация 12 часов прямого эфира.",
