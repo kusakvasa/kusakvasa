@@ -270,7 +270,7 @@ export const resultBullets: ResultBullet[] = [
     },
     title: {
       ru: "Сделала аудиоспектакль на Архстоянии",
-      en: "Made an audio performance at Archstoyanie",
+      en: "Made an audio performance at Archstoyanie (open-air art festival, 10k+ annual visitors)",
     },
     description: {
       ru: "Привела 400+ тёплых лидов в воронку; финансирование закрыла краудфандингом и 5 корпоративных партнёрств без платного медиа.",
@@ -356,7 +356,7 @@ export const alsoExperienceCards: AlsoExperienceCard[] = [
     period: { ru: "июль 2025", en: "July 2025" },
     title: {
       ru: "Сделала аудиоспектакль на Архстоянии",
-      en: "Made an audio performance at Archstoyanie",
+      en: "Made an audio performance at Archstoyanie (open-air art festival, 10k+ annual visitors)",
     },
     description: {
       ru: "Привела 400+ тёплых лидов в воронку, закрыла финансирование через краудфандинг и 5 корпоративных партнёрств.",
