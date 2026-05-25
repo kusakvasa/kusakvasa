@@ -7,6 +7,7 @@ import {
   alsoExperienceCards,
   classifyResumeVariant,
   isAllNone,
+  resolveDescription,
   selectPdfPath,
   selectResultBullets,
   type ResultBullet,
@@ -121,7 +122,7 @@ export default function ResultScreen({ q1, q2, q3, onBack }: ResultScreenProps) 
                 {group.bullets.map((bullet) => (
                   <article key={bullet.id} className="result-chip">
                     <h3>{bullet.title[lang]}</h3>
-                    <p>{bullet.description[lang]}</p>
+                    <p>{resolveDescription(bullet, variant)[lang]}</p>
                   </article>
                 ))}
               </div>

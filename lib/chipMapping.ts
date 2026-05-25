@@ -8,6 +8,8 @@ interface LocalizedText {
   en: string;
 }
 
+export type ResumeVariant = "basic" | "operational" | "launch";
+
 export interface ResultBullet {
   id: string;
   source: LocalizedText;
@@ -15,8 +17,16 @@ export interface ResultBullet {
   label: LocalizedText;
   title: LocalizedText;
   description: LocalizedText;
+  descriptionByVariant?: Partial<Record<ResumeVariant, LocalizedText>>;
   tags: Record<QuestionId, AnswerKey[]>;
   priority: number;
+}
+
+export function resolveDescription(
+  bullet: ResultBullet,
+  variant: ResumeVariant
+): LocalizedText {
+  return bullet.descriptionByVariant?.[variant] ?? bullet.description;
 }
 
 const weights: Record<QuestionId, number> = {
@@ -207,6 +217,12 @@ export const resultBullets: ResultBullet[] = [
     description: {
       ru: "Провела комплексное количественное и качественное исследование аудитории. Теперь видно, как новые продукты влияют на маркетинговые и продуктовые воронки.",
       en: "Ran comprehensive quantitative and qualitative audience research. We now see how new products move marketing and product funnels.",
+    },
+    descriptionByVariant: {
+      operational: {
+        ru: "Провела комплексное количественное и качественное исследование аудитории. Превратила это в системную работу: каждый новый продукт сразу попадает в маркетинговые и продуктовые воронки.",
+        en: "Ran comprehensive quantitative and qualitative audience research. Turned it into a recurring system: every new product flows straight into marketing and product funnels.",
+      },
     },
     tags: {
       q1: ["A", "B"],
@@ -453,8 +469,6 @@ export function selectResultBullets(
 
   return merged.slice(0, limit);
 }
-
-export type ResumeVariant = "basic" | "operational" | "launch";
 
 const launchSignals: Record<QuestionId, AnswerKey[]> = {
   q1: ["A"],
