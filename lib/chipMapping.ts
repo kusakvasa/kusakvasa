@@ -308,8 +308,8 @@ export const resultBullets: ResultBullet[] = [
       en: "Built a travel project",
     },
     description: {
-      ru: "Считала экономику, запускала маркетинг, собирала продуктовую линейку и вела сами заезды. JTBD-интервью находили правильную длительность и локации поездок.",
-      en: "Owned P&L, marketing, product lineup, and trip operations. JTBD interviews shaped the right trip length and locations.",
+      ru: "Считала экономику, запускала маркетинг, собирала продуктовую линейку и вела сами заезды. С помощью JTBD-интервью нашла правильную длительность и ценность поездок — это позволило достигать быстрых солдаутов.",
+      en: "Owned P&L, marketing, product lineup, and trip operations. JTBD interviews helped me find the right trip length and value, which drove fast sellouts.",
     },
     tags: {
       q1: ["A"],
